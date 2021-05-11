@@ -1,9 +1,17 @@
 import React from "react";
 import "./Header.css";
-import useModal from "../Modal/useModal.jsx";
+
 import Modal from "../Modal/Modal";
 
-function Header({ isShowing, hide }) {
+function Header({
+  isShowing,
+  hide,
+  handleSubmit,
+  setUserInput,
+  messages,
+  setUserInpute,
+  setUserInputs,
+}) {
   return (
     <section>
       <div className="hautPage">
@@ -27,7 +35,15 @@ function Header({ isShowing, hide }) {
           width="38%"
         />
       </div>
-      <Modal isShowing={isShowing} hide={hide} />
+      <Modal
+        isShowing={isShowing}
+        hide={hide}
+        handleSubmit={handleSubmit}
+        setUserInput={setUserInput}
+        messages={messages}
+        setUserInputs={setUserInputs}
+        setUserInpute={setUserInpute}
+      />
     </section>
   );
 }

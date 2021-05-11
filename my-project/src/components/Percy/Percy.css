@@ -1,0 +1,10 @@
+.lesDefis{
+    color: rgb(24, 3, 3);
+    background-color: rgba(60, 57, 223, 0.7);
+    border-radius: 40px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}

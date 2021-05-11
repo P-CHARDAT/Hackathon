@@ -9,6 +9,7 @@ import useModal from "./components/Modal/useModal.jsx";
 function App() {
   const [isShowing, toggle] = useModal();
   const [messages, setMessages] = useState([[]]);
+  const [messagesDefis, setMessagesDefis] = useState([[]]);
   const [userInput, setUserInput] = useState("");
   const [userInpute, setUserInpute] = useState("");
   const [userInputs, setUserInputs] = useState("");
@@ -20,6 +21,7 @@ function App() {
       "The state is going to be updated, the User interface will be updated"
     );
     setMessages([...messages, [userInput, userInpute, userInputs]]);
+    setMessagesDefis([...messagesDefis, [userInpute]]);
   };
   return (
     <div>
@@ -31,12 +33,13 @@ function App() {
             handleSubmit={handleSubmit}
             setUserInput={setUserInput}
             messages={messages}
+            messagesDefis={messagesDefis}
             setUserInputs={setUserInputs}
             setUserInpute={setUserInpute}
           />
         </Route>
         <Route path="/percy">
-          <Percy messages={messages} />
+          <Percy messages={messages} messagesDefis={messagesDefis} setMessagesDefis={setMessagesDefis} />
         </Route>
         <Route path="/perseverance">
           <Perseverance messages={messages} />

@@ -1,30 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-import { useState } from "react";
-import useModal from "../Modal/useModal.jsx";
-import Modal from "../Modal/Modal";
-import "./Accueil.css";
-import Burger from "../Burger/Burger";
-export default function Accueil() {
-  const [isShowing, toggle] = useModal();
-  const [messages, setMessages] = useState([[]]);
-  const [userInput, setUserInput] = useState("");
-  const [userInpute, setUserInpute] = useState("");
-  const [userInputs, setUserInputs] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setUserInput("");
-    alert(
-      "The state is going to be updated, the User interface will be updated"
-    );
-    setMessages([...messages, [userInput, userInpute, userInputs]]);
-  };
-=======
 import "./Accueil.css";
 import Header from "../Header/Header";
 import Burger from "../Burger/Burger";
->>>>>>> dev
 
 export default function Accueil({
   isShowing,
@@ -37,22 +14,7 @@ export default function Accueil({
 }) {
   //   const [isShowing, toggle] = useModal();
   return (
-<<<<<<< HEAD
-    <div>
-        <Burger />
-      <button onClick={toggle}>X</button>
-      <Modal
-        isShowing={isShowing}
-        hide={toggle}
-        handleSubmit={handleSubmit}
-        setUserInput={setUserInput}
-        messages={messages}
-        setUserInputs={setUserInputs}
-        setUserInpute={setUserInpute}
-      />
-=======
     <section className="backgroundAccueil">
->>>>>>> dev
       <div>
         <Header
           isShowing={isShowing}

@@ -1,0 +1,71 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes modalFade {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .modal {
+    animation-name: modalFade;
+    animation-duration: 0.8s;
+    z-index: 100;
+    background: white;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 80%;
+    padding: 1rem;
+    font-size: 22px;
+    text-align: justify;
+    color: #6225e6;
+    border-radius: 10%;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+  }
+  
+  .modal-close-button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 3px 3px 0 rgb(177, 177, 177);
+    border-radius: 20%;
+  }
+  

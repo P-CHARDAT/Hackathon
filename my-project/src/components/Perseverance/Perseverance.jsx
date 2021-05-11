@@ -33,6 +33,7 @@ export default function Perseverance({messages, messagesDefis, setMessagesDefis}
       <div>
         <p>Appeler le fil d'actualités de perseverance ici </p>
         <p>Ici appeler les messages de soutien des gens sur le site</p>
+      <h3>Les messages de mes lecteur !</h3>
       </div>
 
       <Burger />

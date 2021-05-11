@@ -4,7 +4,7 @@
     border-radius: 40px;
 }
 
-h2{
+h2, h3{
     display: flex;
     justify-content: center;
 }
@@ -14,3 +14,14 @@ h2{
     border-radius: 40px;
 
 }
+
+.lesDefis  button{
+    margin: 5px;
+    transition-duration: 0.4s;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px black;
+    }
+    .lesDefis button:hover {
+        background-color: #8f4726; 
+        color: white;
+      }

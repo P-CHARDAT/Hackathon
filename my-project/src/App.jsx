@@ -1,21 +1,14 @@
 import './App.css';
 import React from 'react';
-<<<<<<< HEAD
-import Defi from './components/Defi.jsx';
+import Accueil from './components/Accueil/Accueil';
 
 
 function App() {
   return (
     <div>
-      <Defi />
+      <Accueil />
     </div>
     
-=======
-
-function App() {
-  return (
- 
->>>>>>> dev
   );
 }
 

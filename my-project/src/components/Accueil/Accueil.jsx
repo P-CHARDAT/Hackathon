@@ -11,6 +11,8 @@ export default function Accueil({
   messages,
   setUserInpute,
   setUserInputs,
+  versPercy,
+  versPerseverance
 }) {
   //   const [isShowing, toggle] = useModal();
   return (
@@ -24,6 +26,8 @@ export default function Accueil({
           messages={messages}
           setUserInputs={setUserInputs}
           setUserInpute={setUserInpute}
+          versPerseverance={versPerseverance}
+          versPercy={versPercy}
         />
         <h1 className="Bienvenue">
           Bienvenue sur l'application : une journée, un défi !

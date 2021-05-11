@@ -16,6 +16,8 @@ let Modal = ({
   userInpute,
   setUserInputs,
   setUserInpute,
+  versPerseverance,
+  versPercy,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -28,11 +30,6 @@ let Modal = ({
 
                   <div className="formulaire">
                     <form onSubmit={handleSubmit}>
-                      <buttonGroup>
-                        <button>Percy</button>
-                        <button>Perceverance</button>
-                      </buttonGroup>
-
                       <input
                         type="text"
                         placeholder="Votre nom ?"
@@ -61,7 +58,16 @@ let Modal = ({
                         }
                       />
 
-                      <button>Confirmer</button>
+                      <div className="wrapperChoixPercy">
+                        <button className="ChoixPercy" onClick={versPercy}>
+                          <span>Percy</span>
+                        </button>
+                      </div>
+                      <div className="wrapperChoixPerseverance">
+                        <button className="ChoixPerseverance" onClick={versPerseverance}>
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
                     </form>
                   </div>
 

@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import Accueil from "./components/Accueil/Accueil";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import Percy from "./components/Percy/Percy";
 import Perseverance from "./components/Perseverance/Perseverance";
 import useModal from "./components/Modal/useModal.jsx";
@@ -23,6 +23,15 @@ function App() {
     setMessages([...messages, [userInput, userInputs]]);
     setMessagesDefis([...messagesDefis, [userInpute]]);
   };
+  let history = useHistory();
+  const versPercy = () => {
+    history.push("/percy")
+  };
+
+  const versPerseverance = () => {
+    history.push("/perseverance")
+  }
+
   return (
     <div>
       <Switch>
@@ -36,13 +45,15 @@ function App() {
             messagesDefis={messagesDefis}
             setUserInputs={setUserInputs}
             setUserInpute={setUserInpute}
+            versPercy={versPercy} 
+            versPerseverance={versPerseverance}
           />
         </Route>
         <Route path="/percy">
           <Percy messages={messages} messagesDefis={messagesDefis} setMessagesDefis={setMessagesDefis} />
         </Route>
         <Route path="/perseverance">
-          <Perseverance messages={messages} />
+          <Perseverance messages={messages}  />
         </Route>
       </Switch>
     </div>

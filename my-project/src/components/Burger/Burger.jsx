@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Burger.css';
+import React, { useState } from "react";
+import "./Burger.css";
+import LinkAccueil from "./LinkAccueil";
+import LinkPercy from "./LinkPercy";
+import LinkPerse from "./LinkPerse";
 
 function Burger() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -15,23 +17,12 @@ function Burger() {
     <nav className="navBar">
       <button onClick={handleToggle}>☰</button>
       <div activeClassName="active-link" onClick={() => closeMenu()} exact>
-        {''}
-        <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
-          <div>
-            <br />
-            <br />
-            <br />
-            <li className={`${navbarOpen ? '' : 'showMenu0'}`}>
-              <Link exact to="/">
-                Accueil
-              </Link>
-            </li>
-            <li className={`${navbarOpen ? '' : 'showMenu0'}`}>
-              <Link to="/percy">Percy</Link>
-            </li>
-            <li className={`${navbarOpen ? '' : 'showMenu0'}`}>
-              <Link to="/perseverance">Persévérance</Link>
-            </li>
+        {""}
+        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+          <div className="link-wrapper">
+            <LinkAccueil navbarOpen={navbarOpen} />
+            <LinkPercy navbarOpen={navbarOpen} />
+            <LinkPerse navbarOpen={navbarOpen} />
           </div>
         </ul>
       </div>

@@ -53,7 +53,7 @@ ul {
   box-shadow: 5px 5px 5px white;
 }
 
-.percy {
+.percybot {
   display: flex;
   margin-top: 14px;
   margin-right: 35px;
@@ -75,14 +75,14 @@ ul {
   box-shadow: 5px 5px 5px white;
 }
 
-.accueil a, .percy a, .perse a {
+.accueil a, .percybot a, .perse a {
   text-decoration: none;
   color: white;
 }
 
 .menuNav.showMenu {
   width: 100%;
-  opacity: 0.9%;
+  opacity: 1;
 }
 
 .menuNav li:first-child {
@@ -135,7 +135,7 @@ ul {
     box-shadow: 5px 5px 5px white;
   }
 
-  .percy {
+  .percybot {
     margin-top: 45px;
     margin-right: 35px;
     padding: 30px 44px;

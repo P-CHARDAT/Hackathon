@@ -14,21 +14,23 @@ function App() {
   const [userInpute, setUserInpute] = useState("");
   const [userInputs, setUserInputs] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
+    // event.preventDefault();
     setUserInput("");
+    setMessages([...messages, [userInput, userInputs]]);
+    setMessagesDefis([...messagesDefis, [userInpute]]);
     alert(
       "The state is going to be updated, the User interface will be updated"
     );
-    setMessages([...messages, [userInput, userInputs]]);
-    setMessagesDefis([...messagesDefis, [userInpute]]);
   };
   let history = useHistory();
   const versPercy = () => {
+    handleSubmit()
     history.push("/percy")
   };
 
   const versPerseverance = () => {
+    handleSubmit()
     history.push("/perseverance")
   }
 
@@ -53,7 +55,7 @@ function App() {
           <Percy messages={messages} messagesDefis={messagesDefis} setMessagesDefis={setMessagesDefis} />
         </Route>
         <Route path="/perseverance">
-          <Perseverance messages={messages}  />
+          <Perseverance messages={messages} messagesDefis={messagesDefis} setMessagesDefis={setMessagesDefis} />
         </Route>
       </Switch>
     </div>

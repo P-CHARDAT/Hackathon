@@ -29,7 +29,7 @@ let Modal = ({
                   <h4>{titreModal}</h4>
 
                   <div className="formulaire">
-                    <form onSubmit={handleSubmit}>
+                    <form >
                       <input
                         type="text"
                         placeholder="Votre nom ?"
@@ -47,6 +47,7 @@ let Modal = ({
                         }
                         placeholder="Votre message"
                       />
+
                       <input
                         type="texte"
                         placeholder="Soumettre votre défi!"
@@ -58,13 +59,19 @@ let Modal = ({
                         }
                       />
 
-                      <div className="wrapperChoixPercy">
+                      <div
+                        className="wrapperChoixPercy"
+                        
+                      >
                         <button className="ChoixPercy" onClick={versPercy}>
                           <span>Percy</span>
                         </button>
                       </div>
                       <div className="wrapperChoixPerseverance">
-                        <button className="ChoixPerseverance" onClick={versPerseverance}>
+                        <button
+                          className="ChoixPerseverance"
+                          onClick={versPerseverance}
+                        >
                           <span>Perseverance</span>
                         </button>
                       </div>

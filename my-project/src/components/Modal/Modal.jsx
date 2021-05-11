@@ -37,7 +37,7 @@ let Modal = ({
                         onChange={(event) => setUserInputs("Son message : " + event.target.value)}
                         placeholder="Votre message"
                       />
-                      <input type="texte" placeholder="Soumettre votre défi!" value={userInpute} onChange={(event) => setUserInpute("Son défi pour vous ! : : " +event.target.value)} />
+                      <input type="texte" placeholder="Soumettre votre défi!" value={userInpute} onChange={(event) => setUserInpute("Son défi pour vous !  : " +event.target.value)} />
                       
                       <button>Confirmer</button>
                     </form>

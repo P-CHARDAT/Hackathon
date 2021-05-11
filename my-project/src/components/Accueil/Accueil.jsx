@@ -22,7 +22,6 @@ export default function Accueil() {
 
   return (
     <div>
-      <h1>salut</h1>
       <button onClick={toggle}>X</button>
       <Modal
         isShowing={isShowing}

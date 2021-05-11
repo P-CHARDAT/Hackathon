@@ -1,0 +1,123 @@
+.navBar {
+    position: relative;
+  }
+  
+  .navBar button {
+    position: fixed;
+    right: 37px;
+    top: 90px;
+    z-index: 10;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px 1px 0em 0;
+    background: #6225e6;
+    border: none;
+  }
+  
+  .menuNav {
+    overflow-y: scroll;
+    transition: 1s;
+    position: fixed;
+    margin: 2px 0px 0em 0;
+    background: #6225e6;
+    opacity: 0.2;
+    border-top-left-radius: 60px 60px;
+    border-bottom-left-radius: 60px 60px;
+    right: 0;
+    bottom: 0;
+    height: 93%;
+    width: 0;
+    overflow: hidden;
+    max-width: 150px;
+    z-index: 9;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    display: block;
+    float: right;
+    margin-top: 40px;
+    text-align: right;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .menuNav.showMenu {
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .menuNav li:first-child {
+    margin-top: 7rem;
+  }
+  .showMenu0 {
+    display: none;
+  }
+  
+  @media screen and (max-width: 414px) {
+    .navBar {
+      position: absolute;
+    }
+  
+    .navBar button {
+      position: fixed;
+      right: 8%;
+      top: 50px;
+      z-index: 10;
+      font-size: 250%;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 2% 1% 0 0;
+      background: #6225e6;
+    }
+  
+    .menuNav {
+      overflow-y: scroll;
+      position: fixed;
+      top: 30px;
+      background: #6225e6;
+      opacity: 0.2;
+      border-top-left-radius: 60px 60px;
+      border-bottom-left-radius: 60px 60px;
+      right: 0;
+      bottom: 0;
+      height: 87%;
+      width: 0;
+      overflow: hidden;
+      /* max-width: 182px; */
+      z-index: 9;
+    }
+  
+    ul {
+      list-style: none;
+    }
+  
+    a {
+      display: block;
+      float: right;
+      margin-top: 14px;
+      text-align: right;
+      padding: 9px 39px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  
+    .menuNav.showMenu {
+      width: 100%;
+      opacity: 0.9;
+    }
+  
+    .menuNav li:first-child {
+      margin-top: 7rem;
+    }
+  }
+  

@@ -11,6 +11,8 @@ function Header({
   messages,
   setUserInpute,
   setUserInputs,
+  versPerseverance,
+  versPercy
 }) {
   return (
     <section>
@@ -65,6 +67,8 @@ function Header({
         messages={messages}
         setUserInputs={setUserInputs}
         setUserInpute={setUserInpute}
+        versPerseverance={versPerseverance}
+        versPercy={versPercy}
       />
     </section>
   );

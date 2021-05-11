@@ -15,7 +15,9 @@ let Modal = ({
   userInputs,
   userInpute,
   setUserInputs,
-  setUserInpute
+  setUserInpute,
+  versPerseverance,
+  versPercy,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -25,21 +27,54 @@ let Modal = ({
               <div className="modal">
                 <div className="modal-header">
                   <h4>{titreModal}</h4>
-               
+
                   <div className="formulaire">
-                    <form onSubmit={handleSubmit}>
-                     
-                    <input type="text" placeholder="Votre nom ?" value={userInput} onChange={(event) => setUserInput("Utilisateur : " + event.target.value)}/>
-                 
+                    <form >
+                      <input
+                        type="text"
+                        placeholder="Votre nom ?"
+                        value={userInput}
+                        onChange={(event) =>
+                          setUserInput("Utilisateur : " + event.target.value)
+                        }
+                      />
+
                       <input
                         type="texte"
                         value={userInputs}
-                        onChange={(event) => setUserInputs("Son message : " + event.target.value)}
+                        onChange={(event) =>
+                          setUserInputs("Son message : " + event.target.value)
+                        }
                         placeholder="Votre message"
                       />
-                      <input type="texte" placeholder="Soumettre votre défi!" value={userInpute} onChange={(event) => setUserInpute("Son défi pour vous !  : " +event.target.value)} />
-                      
-                      <button>Confirmer</button>
+
+                      <input
+                        type="texte"
+                        placeholder="Soumettre votre défi!"
+                        value={userInpute}
+                        onChange={(event) =>
+                          setUserInpute(
+                            "Son défi pour vous !  : " + event.target.value
+                          )
+                        }
+                      />
+
+                      <div
+                        className="wrapperChoixPercy"
+                        
+                      >
+                        <button className="ChoixPercy" onClick={versPercy}>
+                          <span>Percy</span>
+                        </button>
+                      </div>
+                      <div className="wrapperChoixPerseverance">
+                        <button
+                          className="ChoixPerseverance"
+                          onClick={versPerseverance}
+                        >
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
                     </form>
                   </div>
 
@@ -50,10 +85,8 @@ let Modal = ({
                   >
                     <span>&times;</span>
                   </button>
-                <div className="modal-body">{textModal}</div>
-                
+                  <div className="modal-body">{textModal}</div>
                 </div>
-
               </div>
             </div>
           </div>

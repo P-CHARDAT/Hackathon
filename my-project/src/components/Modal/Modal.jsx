@@ -30,16 +30,16 @@ let Modal = ({
 
                   <div className="formulaire">
                     <form onSubmit={handleSubmit}>
-                      <input
-                        type="text"
-                        placeholder="Votre nom ?"
+                      <input className="NomIN"
+                        type="texte"
+                        placeholder="Votre nom"
                         value={userInput}
                         onChange={(event) =>
                           setUserInput("Utilisateur : " + event.target.value)
                         }
                       />
 
-                      <input
+                      <input className="MessageIN"
                         type="texte"
                         value={userInputs}
                         onChange={(event) =>
@@ -47,14 +47,12 @@ let Modal = ({
                         }
                         placeholder="Votre message"
                       />
-                      <input
+                      <input className="INDefi"
                         type="texte"
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute(
-                            "Son défi pour vous !  : " + event.target.value
-                          )
+                          setUserInpute("Son défi pour vous !  : " + event.target.value)
                         }
                       />
 

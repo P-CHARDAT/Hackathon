@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import Accueil from "./components/Accueil/Accueil";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import Percy from "./components/Percy/Percy";
 import Perseverance from "./components/Perseverance/Perseverance";
 import useModal from "./components/Modal/useModal.jsx";
@@ -9,6 +9,7 @@ import useModal from "./components/Modal/useModal.jsx";
 function App() {
   const [isShowing, toggle] = useModal();
   const [messages, setMessages] = useState([[]]);
+  const [messagesDefis, setMessagesDefis] = useState([[]]);
   const [userInput, setUserInput] = useState("");
   const [userInpute, setUserInpute] = useState("");
   const [userInputs, setUserInputs] = useState("");
@@ -19,8 +20,18 @@ function App() {
     alert(
       "The state is going to be updated, the User interface will be updated"
     );
-    setMessages([...messages, [userInput, userInpute, userInputs]]);
+    setMessages([...messages, [userInput, userInputs]]);
+    setMessagesDefis([...messagesDefis, [userInpute]]);
   };
+  let history = useHistory();
+  const versPercy = () => {
+    history.push("/percy")
+  };
+
+  const versPerseverance = () => {
+    history.push("/perseverance")
+  }
+
   return (
     <div>
       <Switch>
@@ -31,15 +42,18 @@ function App() {
             handleSubmit={handleSubmit}
             setUserInput={setUserInput}
             messages={messages}
+            messagesDefis={messagesDefis}
             setUserInputs={setUserInputs}
             setUserInpute={setUserInpute}
+            versPercy={versPercy} 
+            versPerseverance={versPerseverance}
           />
         </Route>
         <Route path="/percy">
-          <Percy messages={messages} />
+          <Percy messages={messages} messagesDefis={messagesDefis} setMessagesDefis={setMessagesDefis} />
         </Route>
         <Route path="/perseverance">
-          <Perseverance messages={messages} />
+          <Perseverance messages={messages}  />
         </Route>
       </Switch>
     </div>

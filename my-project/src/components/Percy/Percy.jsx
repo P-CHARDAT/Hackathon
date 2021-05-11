@@ -1,10 +1,10 @@
 import React from "react";
-import useModal from "../Modal/useModal.jsx";
+// import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import "./Percy.css";
 
-export default function Percy() {
-  const [isShowing, toggle] = useModal();
+export default function Percy({messages}) {
+  // const [isShowing, toggle] = useModal();
 
   return (
     <div>
@@ -15,7 +15,17 @@ export default function Percy() {
           données envoyées depuis le formulaire modal
         </p>
       </div>
-
+      <div>
+        {messages.map((groupeMessage, index) => (
+          <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
+            {groupeMessage.map((message, i) => (
+              <li key={i} className="messages">
+                {message}
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
       <Burger />
     </div>
   );

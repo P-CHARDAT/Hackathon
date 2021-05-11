@@ -1,10 +1,10 @@
 import React from "react";
-import useModal from "../Modal/useModal.jsx";
+// import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import "./Perseverance.css";
 
 export default function Perseverance() {
-  const [isShowing, toggle] = useModal();
+  // const [isShowing, toggle] = useModal();
 
   return (
     <div>

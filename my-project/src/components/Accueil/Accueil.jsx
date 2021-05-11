@@ -2,7 +2,11 @@ import React from "react";
 import { useState } from "react";
 import useModal from "../Modal/useModal.jsx";
 import Modal from "../Modal/Modal";
+<<<<<<< HEAD
 import "./Accueil.css";
+=======
+import Burger from "../Burger/Burger"
+>>>>>>> dev
 
 export default function Accueil() {
   const [isShowing, toggle] = useModal();

@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+<<<<<<< HEAD
 import Defi from './components/Defi.jsx';
 
 
@@ -9,6 +10,12 @@ function App() {
       <Defi />
     </div>
     
+=======
+
+function App() {
+  return (
+ 
+>>>>>>> dev
   );
 }
 

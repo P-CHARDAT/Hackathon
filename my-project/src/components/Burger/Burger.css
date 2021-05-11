@@ -17,6 +17,7 @@
 .link-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .menuNav {
@@ -25,7 +26,7 @@
   position: fixed;
   margin: 2px 0px 0em 0;
   background: #6225e6;
-  opacity: 0.2;
+  opacity: 0.2%;
   border-top-left-radius: 60px 60px;
   border-bottom-left-radius: 60px 60px;
   right: 0;
@@ -41,21 +42,47 @@ ul {
   list-style: none;
 }
 
-a {
-  display: block;
-  float: right;
-  margin-top: 40px;
-  text-align: right;
-  padding: 12px 40px;
-  text-decoration: none;
-  color: #000000;
+.accueil {
+  display: flex;
+  margin-top: 14px;
+  margin-right: 35px;
+  padding: 38px 40px;
+  color: white;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
+  box-shadow: 5px 5px 5px white;
+}
+
+.percybot {
+  display: flex;
+  margin-top: 14px;
+  margin-right: 35px;
+  padding: 38px 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 5px 5px 5px white;
+}
+
+.perse {
+  display: flex;
+  margin-top: 14px;
+  margin-right: 35px;
+  padding: 38px 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 5px 5px 5px white;
+}
+
+.accueil a, .percybot a, .perse a {
+  text-decoration: none;
+  color: white;
 }
 
 .menuNav.showMenu {
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .menuNav li:first-child {
@@ -72,52 +99,66 @@ a {
 
   .navBar button {
     position: fixed;
-    right: 8%;
-    top: 50px;
+    right: 1%;
+    top: 663px;
     z-index: 10;
     font-size: 250%;
     font-weight: bold;
     cursor: pointer;
     margin: 2% 1% 0 0;
-    background: #6225e6;
+    background: white;
   }
 
   .menuNav {
-    overflow-y: scroll;
-    position: fixed;
-    top: 30px;
-    background: #6225e6;
-    opacity: 0.2;
-    border-top-left-radius: 60px 60px;
-    border-bottom-left-radius: 60px 60px;
-    right: 0;
-    bottom: 0;
-    height: 87%;
+    height: 100%;
     width: 0;
-    overflow: hidden;
-    /* max-width: 182px; */
-    z-index: 9;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
   }
 
   ul {
     list-style: none;
   }
 
-  a {
-    display: block;
-    float: right;
-    margin-top: 14px;
-    text-align: right;
-    padding: 9px 39px;
-    text-decoration: none;
-    color: #000000;
+  .accueil {
+    margin-right: 35px;
+    padding: 30px 35px;
+    color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
+    box-shadow: 5px 5px 5px white;
+  }
+
+  .percybot {
+    margin-top: 45px;
+    margin-right: 35px;
+    padding: 30px 44px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 5px 5px 5px white;
+  }
+
+  .perse {
+    margin-top: 45px;
+    margin-right: 35px;
+    padding: 35px 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 5px 5px 5px white;
+    height: 10px;
   }
 
   .menuNav.showMenu {
     width: 100%;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .menuNav li:first-child {

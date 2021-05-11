@@ -16,14 +16,11 @@ function Burger() {
   return (
     <nav className="navBar">
       <button onClick={handleToggle}>☰</button>
-      <div activeClassName="active-link" onClick={() => closeMenu()} exact>
-        {""}
-        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-          <div className="link-wrapper">
+      <div activeClassName="active-link" onClick={() => closeMenu()} exact>{""}
+        <ul className={`link-wrapper menuNav ${navbarOpen ? " showMenu" : ""}`}>
             <LinkAccueil navbarOpen={navbarOpen} />
             <LinkPercy navbarOpen={navbarOpen} />
             <LinkPerseverance navbarOpen={navbarOpen} />
-          </div>
         </ul>
       </div>
     </nav>

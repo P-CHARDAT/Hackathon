@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Burger.css";
 import LinkAccueil from "./LinkAccueil";
 import LinkPercy from "./LinkPercy";
-import LinkPerse from "./LinkPerse";
+import LinkPerseverance from "./LinkPerseverance";
 
 function Burger() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -21,7 +21,7 @@ function Burger() {
         <ul className={`link-wrapper menuNav ${navbarOpen ? " showMenu" : ""}`}>
             <LinkAccueil navbarOpen={navbarOpen} />
             <LinkPercy navbarOpen={navbarOpen} />
-            <LinkPerse navbarOpen={navbarOpen} />
+            <LinkPerseverance navbarOpen={navbarOpen} />
         </ul>
       </div>
     </nav>

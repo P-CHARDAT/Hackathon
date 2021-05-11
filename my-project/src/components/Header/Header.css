@@ -21,7 +21,7 @@
   -moz-border-radius: 100px;
   border-radius: 400px;
   width: 30%;
-  /* box-shadow: 8px 8px 5px rgb(255, 255, 255); */
+  box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
   z-index: 10;
@@ -128,9 +128,9 @@ svg {
   /* animation cercle */
 
   .circle {
-    width: 340px;
-    height: 340px;
-    top: 50%;
+    width: 343px;
+    height: 343px;
+    top: 53%;
     left: 49%;
   }
 

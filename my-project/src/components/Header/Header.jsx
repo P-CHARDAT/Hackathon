@@ -26,7 +26,7 @@ function Header({
         <img
           className="logo"
           alt="logo"
-          src="https://images2.imgbox.com/eb/0f/Vev7xkUX_o.png"
+          src="images/wall-e.jpg"
           width="30%"
           onClick={hide}
         />
@@ -36,7 +36,29 @@ function Header({
           src="images/ginny.jpg"
           width="38%"
         />
-      </div>
+        {/* <div> */}
+          <svg>
+            <filter id="wavy">
+              <feTurbulence
+                x="0"
+                y="0"
+                baseFrequency="0.008"
+                numOctaves="5"
+                seed="1"
+              >
+                <animate
+                  attributeName="baseFrequency"
+                  dur="60s"
+                  values="0.09;0.005;0.09"
+                  repeatCount="indefinite"
+                />
+              </feTurbulence>
+              <feDisplacementMap in="SourceGraphic" scale="40" />
+            </filter>
+          </svg>
+          <div class="circle"></div>
+        </div>
+      {/* </div> */}
       <Modal
         isShowing={isShowing}
         hide={hide}

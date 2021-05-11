@@ -1,3 +1,14 @@
+.backgroundAccueil {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imageAccueil {
+  text-align: center;
+}
+.imagespace {
+  border-radius: 10%;
+  box-shadow: 10px 10px 5px rgb(216, 185, 235);
+}
 .pair {
   text-align: end;
   margin: 10px;

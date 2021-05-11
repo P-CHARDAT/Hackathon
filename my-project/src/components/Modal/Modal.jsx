@@ -15,7 +15,7 @@ let Modal = ({
   userInputs,
   userInpute,
   setUserInputs,
-  setUserInpute
+  setUserInpute,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -25,20 +25,42 @@ let Modal = ({
               <div className="modal">
                 <div className="modal-header">
                   <h4>{titreModal}</h4>
-               
+
                   <div className="formulaire">
                     <form onSubmit={handleSubmit}>
-                     
-                    <input type="text" placeholder="Votre nom ?" value={userInput} onChange={(event) => setUserInput("Utilisateur : " + event.target.value)}/>
-                 
+                      <buttonGroup>
+                        <button>Percy</button>
+                        <button>Perceverance</button>
+                      </buttonGroup>
+
+                      <input
+                        type="text"
+                        placeholder="Votre nom ?"
+                        value={userInput}
+                        onChange={(event) =>
+                          setUserInput("Utilisateur : " + event.target.value)
+                        }
+                      />
+
                       <input
                         type="texte"
                         value={userInputs}
-                        onChange={(event) => setUserInputs("Son message : " + event.target.value)}
+                        onChange={(event) =>
+                          setUserInputs("Son message : " + event.target.value)
+                        }
                         placeholder="Votre message"
                       />
-                      <input type="texte" placeholder="Soumettre votre défi!" value={userInpute} onChange={(event) => setUserInpute("Son défi pour vous !  : " +event.target.value)} />
-                      
+                      <input
+                        type="texte"
+                        placeholder="Soumettre votre défi!"
+                        value={userInpute}
+                        onChange={(event) =>
+                          setUserInpute(
+                            "Son défi pour vous !  : " + event.target.value
+                          )
+                        }
+                      />
+
                       <button>Confirmer</button>
                     </form>
                   </div>
@@ -50,10 +72,8 @@ let Modal = ({
                   >
                     <span>&times;</span>
                   </button>
-                <div className="modal-body">{textModal}</div>
-                
+                  <div className="modal-body">{textModal}</div>
                 </div>
-
               </div>
             </div>
           </div>

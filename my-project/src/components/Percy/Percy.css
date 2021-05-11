@@ -8,3 +8,9 @@ h2{
     display: flex;
     justify-content: center;
 }
+
+.messageLecteur{
+    background-color: rgba(223, 59, 443, 0.2);
+    border-radius: 40px;
+
+}

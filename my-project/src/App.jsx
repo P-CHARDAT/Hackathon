@@ -20,7 +20,7 @@ function App() {
     alert(
       "The state is going to be updated, the User interface will be updated"
     );
-    setMessages([...messages, [userInput, userInpute, userInputs]]);
+    setMessages([...messages, [userInput, userInputs]]);
     setMessagesDefis([...messagesDefis, [userInpute]]);
   };
   return (

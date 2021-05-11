@@ -22,7 +22,7 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
               {groupeMessage.map((message, i) => (
                 <li key={i} className="messages">
                   {message}
-                  <input type="checkbox" onClick={() => remove(i)}></input>
+                  <button onClick={() => remove(i)}>X</button>
                 </li>
               ))}
             </ul>
@@ -35,6 +35,8 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
         </p>
       </div>
       <div>
+        <h3>Les messages de mes lecteur !</h3>
+        <div className="messageLecteur">
         {messages.map((groupeMessage, index) => (
           <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
             {groupeMessage.map((message, i) => (
@@ -44,6 +46,7 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
             ))}
           </ul>
         ))}
+        </div>
       </div>
       <Burger />
     </div>

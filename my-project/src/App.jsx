@@ -47,7 +47,6 @@ function App() {
   const [userInputeGinny, setUserInputeGinny] = useState("");
   const [userInputsGinny, setUserInputsGinny] = useState("");
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setUserInput("");

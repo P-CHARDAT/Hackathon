@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import "./Ginny.css";
 import Header from "../Header/Header";
 import ModalGinny from "../ModalGinny/ModalGinny";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
 
 export default function Ginny({
   isShowingGinny,
@@ -27,6 +29,20 @@ export default function Ginny({
     updatedDefisGinny.splice(index, 1);
     setMessagesDefisGinny(updatedDefisGinny);
   };
+  // bouton like
+  const [handleClick, setHandleClick] = useState(false);
+  const [handleClick1, setHandleClick1] = useState(false);
+
+  const [count, setCount] = useState(0);
+  function LikeClick() {
+    setHandleClick(!handleClick);
+    setCount(count + 1);
+  }
+  function LikeClick1() {
+    setHandleClick1(!handleClick1);
+    setCount(count + 1);
+  }
+
   return (
     <section className="backgroundGinny">
       <div>
@@ -80,8 +96,17 @@ export default function Ginny({
               />
               <time>13/04/2022 15:00</time>
               <figcaption className="légendeArticle">
-                Mes premières patate de Mars ! Trop content !
+                Mes premières patate de Mars ! Trop contente !
               </figcaption>
+              <button
+                className="likeButton"
+                id="checkbox"
+                type="checkbox"
+                onClick={LikeClick}
+              >
+                {handleClick ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                <label for="checkbox"></label>
+              </button>
             </figure>
           </div>
           <div className="articles">
@@ -97,6 +122,15 @@ export default function Ginny({
                 Cette montagne de sable... magnifique ! heureux d'y être aller
                 avec Percy !
               </figcaption>
+              <button
+                className="likeButton"
+                id="checkbox"
+                type="checkbox"
+                onClick={LikeClick1}
+              >
+                {handleClick ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                <label for="checkbox"></label>
+              </button>
             </figure>
           </div>
         </div>

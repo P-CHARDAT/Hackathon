@@ -10,103 +10,96 @@ h2 {
   justify-content: center;
 }
 
-.messageLecteur{
-    background-color: rgba(223, 59, 443, 0.2);
-    border-radius: 40px;
+.messageLecteur {
+  background-color: rgba(223, 59, 443, 0.2);
+  border-radius: 40px;
 }
-.defisPercy{
-    background-color: rgb(199, 111, 99);
-    margin: 2% 8% 0 8%;
-    padding: 5px 40px;
-    text-align: justify;
-    border-radius: 70px;
-    font-size: 25px;
-    font-family: "Gill Sans", sans-serif;
-    color: white;
+.defisPercy {
+  background-color: rgb(199, 111, 99);
+  margin: 2% 8% 0 8%;
+  padding: 5px 40px;
+  text-align: justify;
+  border-radius: 70px;
+  font-size: 25px;
+  font-family: "Gill Sans", sans-serif;
+  color: white;
 }
-.percyTitle{
-    font-family: "Gill Sans", sans-serif;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 200%;
+.percyTitle {
+  font-family: "Gill Sans", sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 200%;
 }
 .backgroundPercy {
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    background-image: url('papierpeint.jpg');
-    top: 0;
-    left: 0;
-  }
-  .texteDefi{
-      color: black;
-      text-align: justify;
-  }
-  .messagesLecteurs{
-    background-color: rgba(126, 86, 81, 0.473);
-    margin: 2% 8% 0 28%;
-    padding: 5px 40px;
-    text-align: right;
-    border-radius: 70px;
-    font-size: 25px;
-    font-family: "Gill Sans", sans-serif;
-    color: white;
-  }
-  .messageLecteur{
-    color: black;
-    text-align: right;
-  }
-  .messagesRobots{
-    background-color: rgba(2, 5, 81, 0.527);
-    margin: 2% 28% 0 8%;
-    padding: 5px 40px;
-    text-align: left;
-    border-radius: 70px;
-    font-size: 25px;
-    font-family: "Gill Sans", sans-serif;
-    color: white;
-  }
-  .messageRobots{
-    color: black;
-    text-align: left;
-  }
-
-
-  .defisPercy > button{
- color: rgb(17, 1, 1);
- border-radius: 10px;
- cursor: pointer;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-image: url("papierpeint.jpg");
+  top: 0;
+  left: 0;
 }
-.defisPercy > button:hover{
+.texteDefi {
+  color: black;
+  text-align: justify;
+}
+.messagesLecteurs {
+  background-color: rgba(126, 86, 81, 0.473);
+  margin: 2% 8% 0 28%;
+  padding: 5px 40px;
+  text-align: right;
+  border-radius: 70px;
+  font-size: 25px;
+  font-family: "Gill Sans", sans-serif;
+  color: white;
+}
+.messageLecteur {
+  color: black;
+  text-align: right;
+}
+.messagesRobots {
+  background-color: rgba(2, 5, 81, 0.527);
+  margin: 2% 28% 0 8%;
+  padding: 5px 40px;
+  text-align: left;
+  border-radius: 70px;
+  font-size: 25px;
+  font-family: "Gill Sans", sans-serif;
+  color: white;
+}
+.messageRobots {
+  color: black;
+  text-align: left;
+}
+
+.defisPercy > button {
+  color: rgb(17, 1, 1);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.defisPercy > button:hover {
   background-color: rgb(185, 108, 6);
-
 }
 
-  @media screen and (max-width: 414px) {
-    .defisPercy {
-        font-size: 17px;
-        margin-top: 8%;
-    }
-    .percyTitle{
-        font-size: 150%;
-    }
-    .messagesRobots {
-        font-size: 17px;
-        margin-top: 8%;
-    }
-    .messageRobot{
-        font-size: 150%;
-    }
-    .messagesLecteurs{
-        font-size: 17px;
-        margin-top: 8%;
-    }
-    .messageLecteur{
-        font-size: 150%;
-    }
+@media screen and (max-width: 414px) {
+  .defisPercy {
+    font-size: 17px;
+    margin-top: 8%;
   }
-
-
- 
-  
-  
+  .percyTitle {
+    font-size: 150%;
+  }
+  .messagesRobots {
+    font-size: 17px;
+    margin-top: 8%;
+  }
+  .messageRobot {
+    font-size: 150%;
+  }
+  .messagesLecteurs {
+    font-size: 17px;
+    margin-top: 8%;
+  }
+  .messageLecteur {
+    font-size: 150%;
+  }
+}

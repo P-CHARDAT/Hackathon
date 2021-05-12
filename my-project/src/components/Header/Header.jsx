@@ -36,7 +36,7 @@ function Header({
           src="images/ginny.jpg"
           width="38%"
         />
-        {/* <div> */}
+
           <svg>
             <filter id="wavy">
               <feTurbulence
@@ -58,7 +58,7 @@ function Header({
           </svg>
           <div class="circle"></div>
         </div>
-      {/* </div> */}
+
       <Modal
         isShowing={isShowing}
         hide={hide}

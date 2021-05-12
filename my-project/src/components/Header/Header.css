@@ -14,6 +14,7 @@
   box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
+
 }
 .logo {
   overflow: hidden;
@@ -25,7 +26,14 @@
   margin-top: 4%;
   max-width: 12vw;
   z-index: 10;
+  cursor: pointer;
 }
+
+.logo:hover {
+  transition: 0.5s;
+  box-shadow: 8px 8px 5px rgb(250, 171, 0);
+}
+
 .ginny {
   overflow: hidden;
   -webkit-border-radius: 100px;
@@ -35,6 +43,7 @@
   box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
+
 }
 
 /* animation cercle */
@@ -104,6 +113,7 @@
     filter: hue-rotate(360deg);
   }
 }
+
 
 svg {
   width: 0;

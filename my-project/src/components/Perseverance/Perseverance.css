@@ -1,0 +1,38 @@
+.backgroundGinny {
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  background-image: url("papierpeint3.jpg");
+  top: 0;
+  left: 0;
+}
+.ginnyZoom{
+    margin:0;
+}
+
+
+.defisGinny{
+    background-color: rgb(157, 141, 33);
+    margin: 2% 8% 0 8%;
+    padding: 5px 40px;
+    text-align: justify;
+    border-radius: 70px;
+    font-size: 25px;
+    font-family: "Gill Sans", sans-serif;
+    color: white;
+}
+.ginnyTitle{
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+}
+@media screen and (max-width: 414px) {
+    .defisGinny{
+        font-size: 17px;
+        margin-top: 8%;
+    }
+    .percyGinny{
+        font-size: 150%;
+    }
+}

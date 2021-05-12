@@ -4,16 +4,16 @@
 
 .pair {
   text-align: end;
-margin: 0;
-  color: red;
-}
+  margin: 0;
+  color: rgb(0, 0, 0);
+  }
 
 .impair {
-  color: blue;
+  color: #632daf;
   margin: 0;
 }
-.impair1{
-  margin-right:0;
+.impair1 {
+  margin-right: 0;
 }
 
 .messages {
@@ -22,7 +22,7 @@ margin: 0;
   align-items: center;
 }
 
-.introduction{
+.introduction {
   background-color: rgb(2, 4, 81);
   margin: 20px 140px 0 140px;
   padding: 5px 40px;
@@ -33,44 +33,57 @@ margin: 0;
   color: white;
 }
 
-.bienvenue{
+.bienvenue {
   font-family: "Gill Sans", sans-serif;
   text-align: center;
   color: rgb(255, 166, 0);
 }
-.imagespace{
+.imagespace {
   max-width: 21.8vw;
 }
 
 .backgroundAccueil {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('papierpeint1.jpg');
+  background-image: url("papierpeint1.jpg");
   height: auto;
-
 }
 
 @media screen and (max-width: 414px) {
-
-.messages {
-  font-size: 20px;
-}
-.imagespace{
-  max-width: 61vw;
-}
-.introduction{
-  font-size: 16px;
-  color: white;
-  margin: 10px 10px 0 10px;
-  border-radius: 40px;
-  padding: 5px 15px;
-}
-.bienvenue{
-  font-size: 25.3px;
-}
-.backgroundAccueil {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('papierpeint1.jpg');
-}
+  .messages {
+    font-size: 20px;
+  }
+  .imagespace {
+    max-width: 61vw;
+  }
+  .introduction {
+    font-size: 16px;
+    color: white;
+    margin: 10px 10px 0 10px;
+    border-radius: 40px;
+    padding: 5px 15px;
+  }
+  .bienvenue {
+    font-size: 25.3px;
+  }
+  .backgroundAccueil {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("papierpeint1.jpg");
+  }
+  .pair {
+    text-align: end;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    }
+  
+  .impair {
+    color: #632daf;
+    margin: 0;
+    font-size: 17px;
+  }
+  .messagesLecteurs{
+    font-size: 17px;
+  }
 }

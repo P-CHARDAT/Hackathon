@@ -66,7 +66,7 @@
   bottom: 100px;
   border: 2px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 50px #012845, inset 0 0 50px #012845;
+  box-shadow: 0 0 50px #b9680b, inset 0 0 50px #f05b04;
   animation: animate 1s linear;
 }
 
@@ -79,7 +79,7 @@
   bottom: 100px;
   border: 2px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 10px #012845, inset 0 0 20px #012845;
+  box-shadow: 0 0 10px #d40404, inset 0 0 20px #b10c06;
 }
 @keyframes animate {
   0% {

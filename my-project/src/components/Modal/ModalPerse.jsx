@@ -29,20 +29,6 @@ let Modal = ({
                   <h4>{titreModal}</h4>
 
                   <div className="formulaire">
-                      <div
-                        className="wrapperChoixPercy">
-                        <button className="ChoixPercy">
-                          <span>Percy</span>
-                        </button>
-
-                      </div>
-                      <div className="wrapperChoixPerseverance">
-                        <button
-                          className="ChoixPerseverance">
-                         
-                          <span>Perseverance</span>
-                        </button>
-                      </div>
                     <form >
                       <input
                         type="text"
@@ -72,6 +58,14 @@ let Modal = ({
                           )
                         }
                       />
+                     
+                      <div className="wrapperChoixPerseverance">
+                        <button
+                          className="ChoixPerseverance"
+                          onClick={versPerseverance}>
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
 
                     </form>
                   </div>

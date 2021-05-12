@@ -2,7 +2,8 @@ import React from "react";
 import "./Header.css";
 
 import Modal from "../Modal/Modal";
-
+import ModalPerse from "../Modal/ModalPerse";
+import Percy from "../Percy/Percy";
 function Header({
   isShowing,
   hide,
@@ -22,6 +23,7 @@ function Header({
           alt="perceverance"
           src="images/percy.jpg"
           width="38%"
+          
         />
         <img
           className="logo"
@@ -49,7 +51,7 @@ function Header({
                 <animate
                   attributeName="baseFrequency"
                   dur="60s"
-                  values="0.09;0.005;0.09"
+                  values="0.09;0.015;0.09"
                   repeatCount="indefinite"
                 />
               </feTurbulence>

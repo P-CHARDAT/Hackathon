@@ -21,46 +21,6 @@
     display: flex;
     align-items: center;
   }
-<<<<<<< HEAD
-}
-
-.modal {
-  animation-name: modalFade;
-  animation-duration: 0.8s;
-  z-index: 100;
-  background: white;
-  position: relative;
-  margin: auto;
-  border-radius: 5px;
-  max-width: 500px;
-  width: 80%;
-  padding: 1rem;
-  font-size: 22px;
-  text-align: justify;
-  color: #6225e6;
-  border-radius: 10%;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 28px;
-}
-
-.modal-close-button {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  background-color: rgb(255, 0, 0);
-  box-shadow: 3px 3px 0 rgb(177, 177, 177);
-  border-radius: 20%;
-}
-
-=======
   
   @keyframes modalFade {
     from {
@@ -115,4 +75,3 @@
  justify-content: center;
  margin: 5px 50px;
   }
->>>>>>> dev

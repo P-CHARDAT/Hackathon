@@ -31,6 +31,9 @@ export default function Perseverance({messages, messagesDefis, setMessagesDefis}
         <p>Appeler le composant défi ici.</p>
       </div>
       <div>
+        <h2>Ma vie a moi :D</h2>
+        <img src="" alt="" />
+
         <p>Appeler le fil d'actualités de perseverance ici </p>
         <p>Ici appeler les messages de soutien des gens sur le site</p>
       <h3>Les messages de mes lecteur !</h3>

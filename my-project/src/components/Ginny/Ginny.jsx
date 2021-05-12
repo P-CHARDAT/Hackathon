@@ -61,9 +61,9 @@ export default function Ginny({
       />
       <div className="defisGinny">
         <h1 className="ginnyTitle">Ginny</h1>
-        <button onClick={toggleGinny}>Tchater avec Percy</button>
+        <button onClick={toggleGinny}>Tchater avec Ginny</button>
         <p>Vous avez aimé {count} fois les messages de Ginny </p>
-        <h2>Ses défis !</h2>
+        <h2>Ses défis ! ⤵</h2>
         <div className="lesDefis">
           {messagesDefisGinny.map((groupeMessage, index) => (
             <ul key={index} className={index % 2 === 0 ? "pair1" : "impair1"}>

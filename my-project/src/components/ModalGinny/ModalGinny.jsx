@@ -22,7 +22,7 @@ let ModalGinny = ({
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                  <h4>titreModal</h4>
+                <h4>Votre défi</h4>
 
                   <div className="formulaire">
                     <form onSubmit={handleSubmitGinny}>
@@ -60,7 +60,7 @@ let ModalGinny = ({
                         }
                         required
                       />
-                      <button >
+                      <button className="Valider">
                         Valider
                       </button>
                     </form>
@@ -73,7 +73,6 @@ let ModalGinny = ({
                   >
                     <span>&times;</span>
                   </button>
-                  <div className="modal-body">textModal</div>
                 </div>
               </div>
             </div>

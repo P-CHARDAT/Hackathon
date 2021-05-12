@@ -14,11 +14,12 @@
   background-color: rgb(157, 141, 33);
   margin: 2% 8% 0 8%;
   padding: 5px 40px;
-  text-align: justify;
+  text-align: center;
   border-radius: 70px;
   font-size: 25px;
   font-family: "Gill Sans", sans-serif;
   color: white;
+  
 }
 .ginnyTitle {
   font-family: "Gill Sans", sans-serif;
@@ -40,13 +41,30 @@
   margin-top: 4%;
   margin-left: 6%;
 }
-
+.defisGinny > button {
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 4px #cccccc;
+    align-items: center;
+    text-align: center;
+    font-size: 200%;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  .defisGinny > button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  
+  }
 .photosVlog {
   border-radius: 5%;
 }
 @media screen and (max-width: 414px) {
   .defisGinny {
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 8%;
   }
   .percyGinny {
@@ -55,7 +73,7 @@
 
   .messagesRobots {
     margin: 0% 8% 0 8%;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     /* padding: 0%; */
   }
@@ -65,4 +83,12 @@
     margin: 0;
     padding: 0;
   }
+
+  .defisGinny > button {
+    font-size: 140%;
+  }
+  .messagesLecteurs{
+    font-size: 17px;
+  }
+
 }

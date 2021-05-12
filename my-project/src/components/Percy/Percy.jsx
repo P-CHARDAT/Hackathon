@@ -1,5 +1,5 @@
+
 import React, { useState } from "react";
-// import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import Header from "../Header/Header";
 import "./Percy.css";
@@ -48,7 +48,6 @@ export default function Percy({
     setHandleClick2(!handleClick2);
     setCount(count + 1);
   }
-
   return (
     <section className="backgroundPercy">
       <div>
@@ -65,7 +64,8 @@ export default function Percy({
           <button className="tchatter" onClick={toggle}>
             Tchater avec Percy
           </button>
-          <p>Vous avez aimé {count} fois les messages de Ginny </p>
+          <p>Vous avez aimé {count} fois les messages de Percy </p>
+
           <h2>Ses défis ! ⤵</h2>
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
@@ -121,7 +121,7 @@ export default function Percy({
               <time>{nasaData[3].earth_date}</time>
               <figcaption className="légendeArticle">
                 Cette montagne de sable... magnifique ! Heureux d'y être aller
-                avec Ginny ! Je vous présente Olympus Mons. Avec 21,9
+                avec Percy ! Je vous présente Olympus Mons. Avec 21,9
                 kilomètres, l'énorme volcan bouclier est le plus haut sommet de
                 toute planète du système solaire. Pendant 40 ans, après sa
                 découverte en 1971, ce fut le plus haut sommet connu du système
@@ -164,6 +164,7 @@ export default function Percy({
               </button>
             </figure>
           </div>
+
         </div>
         <div className="messagesLecteurs">
           <h3>Messages des lecteurs</h3>

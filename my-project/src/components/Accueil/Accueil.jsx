@@ -4,34 +4,24 @@ import Header from "../Header/Header";
 import Burger from "../Burger/Burger";
 
 export default function Accueil({
-  isShowing,
-  hide,
-  handleSubmit,
-  setUserInput,
-  messages,
-  setUserInpute,
-  setUserInputs,
+  isShowingHeader,
+  toggleHeader,
   versPercy,
-  versPerseverance
+  versGinny,
 }) {
   //   const [isShowing, toggle] = useModal();
   return (
     <section className="backgroundAccueil">
       <div>
         <Header
-          isShowing={isShowing}
-          hide={hide}
-          handleSubmit={handleSubmit}
-          setUserInput={setUserInput}
-          messages={messages}
-          setUserInputs={setUserInputs}
-          setUserInpute={setUserInpute}
-          versPerseverance={versPerseverance}
+          isShowingHeader={isShowingHeader}
+          toggleHeader={toggleHeader}
           versPercy={versPercy}
+          versGinny={versGinny}
         />
         <div className="introduction">
           <h1 className="bienvenue">
-          Bienvenue sur l'application : 1 jour, 1 défi pour nos robots !
+            Bienvenue sur l'application : 1 jour, 1 défi pour nos robots !
           </h1>
           <p className="descriptif">
 

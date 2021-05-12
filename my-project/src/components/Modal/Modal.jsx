@@ -5,19 +5,14 @@ import "./Modal.css";
 
 let Modal = ({
   isShowing,
-  hide,
-  titreModal,
-  textModal,
+  toggle,
   userInput,
-  handleSubmit,
-  messages,
   setUserInput,
   userInputs,
   userInpute,
   setUserInputs,
   setUserInpute,
-  versPerseverance,
-  versPercy,
+  handleSubmit
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -26,10 +21,10 @@ let Modal = ({
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                  <h4>{titreModal}</h4>
+                  <h4>titreModal</h4>
 
                   <div className="formulaire">
-                    <form >
+                    <form onSubmit={handleSubmit}>
                       <input
                         type="text"
                         placeholder="Votre nom ?"
@@ -58,34 +53,18 @@ let Modal = ({
                           )
                         }
                       />
-
-                      <div
-                        className="wrapperChoixPercy"
-                        
-                      >
-                        <button className="ChoixPercy" onClick={versPercy}>
-                          <span>Percy</span>
-                        </button>
-                      </div>
-                      <div className="wrapperChoixPerseverance">
-                        <button
-                          className="ChoixPerseverance"
-                          onClick={versPerseverance}
-                        >
-                          <span>Perseverance</span>
-                        </button>
-                      </div>
+                      <button>Valider</button>
                     </form>
                   </div>
 
                   <button
                     type="button"
                     className="modal-close-button"
-                    onClick={hide}
+                    onClick={toggle}
                   >
                     <span>&times;</span>
                   </button>
-                  <div className="modal-body">{textModal}</div>
+                  <div className="modal-body">textModal</div>
                 </div>
               </div>
             </div>

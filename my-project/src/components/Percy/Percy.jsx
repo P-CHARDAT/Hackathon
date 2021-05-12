@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-// import useModal from "../Modal/useModal.jsx";
+
+import React, { useState } from "react";
 import Burger from "../Burger/Burger";
 import Header from "../Header/Header";
 import "./Percy.css";
-import MapMessage from "./MapMessage";
 import Modal from "../Modal/Modal";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
@@ -24,6 +23,7 @@ export default function Percy({
   versGinny,
   versPercyHeader,
   versGinnyHeader,
+  nasaData,
 }) {
   const remove = (index) => {
     const updatedDefis = [...messagesDefis];
@@ -33,6 +33,7 @@ export default function Percy({
   // bouton like
   const [handleClick, setHandleClick] = useState(false);
   const [handleClick1, setHandleClick1] = useState(false);
+  const [handleClick2, setHandleClick2] = useState(false);
 
   const [count, setCount] = useState(0);
   function LikeClick() {
@@ -41,6 +42,10 @@ export default function Percy({
   }
   function LikeClick1() {
     setHandleClick1(!handleClick1);
+    setCount(count + 1);
+  }
+  function LikeClick2() {
+    setHandleClick2(!handleClick2);
     setCount(count + 1);
   }
   return (
@@ -60,6 +65,7 @@ export default function Percy({
             Tchater avec Percy
           </button>
           <p>Vous avez aimé {count} fois les messages de Percy </p>
+
           <h2>Ses défis ! ⤵</h2>
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
@@ -84,13 +90,14 @@ export default function Percy({
                 alt="patate"
                 width="70%"
               />
-              <time>13/04/2022 15:00</time>
+              <time>{nasaData[3].earth_date}</time>
               <figcaption className="légendeArticle">
                 Mes premières patates de Mars ! Trop content ! Je vous confirme
                 qu’il est possible de faire pousser des pommes de terre ici,
                 comme dans le blockbuster Seul sur Mars, avec Matt Damon.
                 Notamment en fertilisant la terre martienne, et donc stérile,
-                avec des excréments. 
+                avec des excréments. Ne me demandez pas d'où ces derniers
+                viennent..
               </figcaption>
               <button
                 className="likeButton"
@@ -107,11 +114,11 @@ export default function Percy({
             <figure className="vlog">
               <img
                 className="photosVlog"
-                src="./images/Montagne.jpg"
+                src={nasaData[3].img_src}
                 alt="montagne"
                 width="40%"
               />
-              <time>15/04/2022 8:00</time>
+              <time>{nasaData[3].earth_date}</time>
               <figcaption className="légendeArticle">
                 Cette montagne de sable... magnifique ! Heureux d'y être aller
                 avec Percy ! Je vous présente Olympus Mons. Avec 21,9
@@ -131,6 +138,33 @@ export default function Percy({
               </button>
             </figure>
           </div>
+
+          <div className="articles">
+            <figure className="vlog">
+              <img
+                className="photosVlog"
+                src={nasaData[2].img_src}
+                alt="montagne"
+                width="40%"
+              />
+              <time>{nasaData[2].earth_date}</time>
+              <figcaption className="légendeArticle">
+                Ginny à mit 30 minutes terrestre à contourner une pente
+                aujourd'hui. Vous auriez du voir sa tête quand je lui ai dit
+                qu'on devait se rendre sur cette montagne !
+              </figcaption>
+              <button
+                className="likeButton"
+                id="checkbox2"
+                type="checkbox"
+                onClick={LikeClick2}
+              >
+                {handleClick2 ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                <label for="checkbox"></label>
+              </button>
+            </figure>
+          </div>
+
         </div>
         <div className="messagesLecteurs">
           <h3>Messages des lecteurs</h3>

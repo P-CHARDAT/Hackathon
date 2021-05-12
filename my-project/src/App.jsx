@@ -9,23 +9,23 @@ import useModalHeader from "./components/ModalHeader/useModalHeader.jsx";
 import useModalGinny from "./components/ModalGinny/useModalGinny.jsx";
 
 function App() {
-  // const [nasaData, setNasaData] = useState([]);
+  const [nasaData, setNasaData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(
-  //     "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=25&camera=MAST&page=1&api_key=0F7LCSVWxdcpoA75zROijk3DT3Yz0fikP6bFVD6M"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const idToSearch = [506156, 506157, 506159, 506144];
-  //       let myData = [];
-  //       myData = data.photos.filter(
-  //         (item) => idToSearch.indexOf(item.id) !== -1
-  //       );
-  //       console.log(myData);
-  //       setNasaData(myData);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch(
+      "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=25&camera=MAST&page=1&api_key=0F7LCSVWxdcpoA75zROijk3DT3Yz0fikP6bFVD6M"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const idToSearch = [506156, 506157, 506159, 506144];
+        let myData = [];
+        myData = data.photos.filter(
+          (item) => idToSearch.indexOf(item.id) !== -1
+        );
+        console.log(myData);
+        setNasaData(myData);
+      });
+  }, []);
 
   // Pour composant Header
   const [isShowingHeader, toggleHeader] = useModalHeader();
@@ -117,11 +117,11 @@ function App() {
             setCount={setCount}
             versPercyHeader={versPercyHeader}
             versGinnyHeader={versGinnyHeader}
+            nasaData={nasaData}
           />
         </Route>
         <Route path="/ginny">
           <Ginny
-
             isShowingGinny={isShowingGinny}
             toggleGinny={toggleGinny}
             count={count}
@@ -133,13 +133,13 @@ function App() {
             setUserInputGinny={setUserInputGinny}
             setUserInputsGinny={setUserInputsGinny}
             setUserInputeGinny={setUserInputeGinny}
-
             isShowingHeader={isShowingHeader}
             toggleHeader={toggleHeader}
             versPercy={versPercy}
             versGinny={versGinny}
             versPercyHeader={versPercyHeader}
             versGinnyHeader={versGinnyHeader}
+            nasaData={nasaData}
           />
         </Route>
       </Switch>

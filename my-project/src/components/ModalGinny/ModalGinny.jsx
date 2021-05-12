@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ReactDOM from "react-dom";
 import "./ModalGinny.css";
@@ -14,8 +14,6 @@ let ModalGinny = ({
   setUserInputeGinny,
   handleSubmitGinny,
 
-  count,
-  setCount,
 }) =>
   isShowingGinny
     ? ReactDOM.createPortal(

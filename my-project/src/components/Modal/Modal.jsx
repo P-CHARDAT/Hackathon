@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ReactDOM from "react-dom";
 import "./Modal.css";
@@ -13,8 +13,6 @@ let Modal = ({
   setUserInputs,
   setUserInpute,
   handleSubmit,
-
-
 }) => 
 
   isShowing

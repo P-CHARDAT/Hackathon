@@ -3,7 +3,7 @@ import "./Header.css";
 
 import ModalHeader from "../ModalHeader/ModalHeader";
 
-function Header({ isShowingHeader, toggleHeader, versPercy, versGinny }) {
+function Header({ isShowingHeader, toggleHeader, versPercy, versGinny, versPercyHeader, versGinnyHeader}) {
   return (
     <section>
       <div className="hautPage">
@@ -54,8 +54,8 @@ function Header({ isShowingHeader, toggleHeader, versPercy, versGinny }) {
       <ModalHeader
         isShowingHeader={isShowingHeader}
         toggleHeader={toggleHeader}
-        versPercy={versPercy}
-        versGinny={versGinny}
+        versPercyHeader={versPercyHeader}
+        versGinnyHeader={versGinnyHeader}
       />
     </section>
   );

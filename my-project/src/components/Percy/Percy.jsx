@@ -11,7 +11,7 @@ export default function Percy({
   toggle,
   messages,
   messagesDefis,
-  // setMessagesDefis,
+  setMessagesDefis,
   handleSubmit,
   setUserInput,
   setUserInpute,
@@ -20,12 +20,14 @@ export default function Percy({
   toggleHeader,
   versPercy,
   versGinny,
+  versPercyHeader,
+  versGinnyHeader,
 }) {
-  // const remove = (i) => {
-  //   const updatedDefis = [...messagesDefis];
-  //   updatedDefis.splice(i, 1);
-  //   setMessagesDefis(updatedDefis);
-  // };
+  const remove = (index) => {
+    const updatedDefis = [...messagesDefis];
+    updatedDefis.splice(index, 1);
+    setMessagesDefis(updatedDefis);
+  };
 
   return (
     <section className="backgroundPercy">
@@ -35,6 +37,8 @@ export default function Percy({
           toggleHeader={toggleHeader}
           versPercy={versPercy}
           versGinny={versGinny}
+          versPercyHeader={versPercyHeader}
+          versGinnyHeader={versGinnyHeader}
         />
         <div className="defisPercy">
           <h1 className="percyTitle">Percy</h1>
@@ -46,7 +50,7 @@ export default function Percy({
                 {groupeMessage.map((message, i) => (
                   <li key={i} className="messages">
                     {message}
-                    {/* <button onClick={() => remove(i)}>X</button> */}
+                    <button onClick={() => remove(index)}>X</button>
                   </li>
                 ))}
               </ul>

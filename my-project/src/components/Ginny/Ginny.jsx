@@ -1,9 +1,9 @@
 import React from "react";
 // import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
-import "./Perseverance.css";
+import "./Ginny.css";
 
-export default function Perseverance({messages, messagesDefis, setMessagesDefis}) {
+export default function Ginny({messages, messagesDefis, setMessagesDefis}) {
   // const [isShowing, toggle] = useModal();
   const remove = (i) => {
     const updatedDefis = [...messagesDefis];

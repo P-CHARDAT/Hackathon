@@ -1,16 +1,20 @@
-.lesDefis{
-    color: rgb(24, 3, 3);
-    background-color: rgba(60, 57, 223, 0.7);
-    border-radius: 40px;
+.lesDefis {
+  color: rgb(24, 3, 3);
+  background-color: rgba(60, 57, 223, 0.7);
+  border-radius: 40px;
+  display: block;
 }
 
-h2{
-    display: flex;
-    justify-content: center;
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
-.messageLecteur{
-    background-color: rgba(223, 59, 443, 0.2);
-    border-radius: 40px;
+.messageLecteur {
+  background-color: rgba(223, 59, 443, 0.2);
+  border-radius: 40px;
+}
 
+.hide-remove-button {
+  display: none;
 }

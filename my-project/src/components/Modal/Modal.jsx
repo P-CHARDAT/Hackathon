@@ -24,7 +24,7 @@ let Modal = ({
                   <h4>titreModal</h4>
 
                   <div className="formulaire">
-<<<<<<< HEAD
+
                       <div
                         className="wrapperChoixPercy">
                         <button className="ChoixPercy">
@@ -40,19 +40,20 @@ let Modal = ({
                         </button>
                       </div>
                     <form >
-=======
+
                     <form onSubmit={handleSubmit}>
->>>>>>> dev
-                      <input
+
+                      <input className="NomIN"
                         type="text"
                         placeholder="Votre nom ?"
+
                         value={userInput}
                         onChange={(event) =>
                           setUserInput("Utilisateur : " + event.target.value)
                         }
                       />
 
-                      <input
+                      <input className="MessageIN"
                         type="texte"
                         value={userInputs}
                         onChange={(event) =>
@@ -61,14 +62,12 @@ let Modal = ({
                         placeholder="Votre message"
                       />
 
-                      <input
+                      <input className="INDefi"
                         type="texte"
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute(
-                            "Son défi pour vous !  : " + event.target.value
-                          )
+                          setUserInpute("Son défi pour vous !  : " + event.target.value)
                         }
                       />
                       <button>Valider</button>

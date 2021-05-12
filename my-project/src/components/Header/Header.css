@@ -14,7 +14,12 @@
   box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
+  cursor: pointer;
 
+}
+.percy:hover {
+  transition: 0.5s;
+  box-shadow: 8px 8px 5px rgb(250, 150, 0);
 }
 .logo {
   overflow: hidden;
@@ -31,7 +36,7 @@
 
 .logo:hover {
   transition: 0.5s;
-  box-shadow: 8px 8px 5px rgb(250, 171, 0);
+  box-shadow: 8px 8px 5px rgb(250, 150, 0);
 }
 
 .ginny {
@@ -43,16 +48,12 @@
   box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
-
+  cursor: pointer;
 }
-
-/* animation cercle */
-/* .circle {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-} */
-
+.ginny:hover {
+  transition: 0.5s;
+  box-shadow: 8px 8px 5px rgb(250, 150, 0);
+}
 .circle {
   position: absolute;
   transform: translate(-50%, -50%);

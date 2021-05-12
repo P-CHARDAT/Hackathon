@@ -90,6 +90,10 @@ ul {
   text-decoration: none;
   color: white;
 }
+.accueil a:hover, .percybot a:hover, .perse a:hover {
+  text-decoration: none;
+  color: rgb(250, 150, 0);
+}
 
 .menuNav.showMenu {
   width: 100%;

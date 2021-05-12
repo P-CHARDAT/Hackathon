@@ -61,34 +61,75 @@ export default function Percy({
             données envoyées depuis le formulaire modal
           </p>
         </div>
-        <div className="messagesRobots">
-          <h3>Les messages des robots</h3>
+
+        {/* <div className="messagesRobots">
+          <h3>Messages de Percy</h3>
           <div className="messageRobot"></div>
-        </div>
-        <div className="messagesLecteurs">
-          <h3>Les messages de mes lecteur</h3>
-          <div className="messageLecteur">
-            {messages.map((groupeMessage, index) => (
-              <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
-                {groupeMessage.map((message, i) => (
-                  <li key={i} className="messages">
-                    {message}
-                  </li>
-                ))}
-              </ul>
-            ))}
+        </div> */}
+
+        <div>
+          <div className="maVie"></div>
+          <p>Appeler le fil d'actualités de perseverance ici </p>
+          <p>Ici appeler les messages de soutien des gens sur le site</p>
+          <h3>Les messages de mes lecteur !</h3>
+          <div className="messagesRobots">
+            <h3 className="messageGinny">Messages de Percy</h3>
+            <div className="articles">
+              <figure className="vlog">
+                <img
+                  className="photosVlog"
+                  src="./images/patate.png"
+                  alt="patate"
+                  width="70%"
+                />
+                <time>13/04/2022 15:00</time>
+                <figcaption className="légendeArticle">
+                  Mes premières patates de Mars ! Trop content ! 
+                </figcaption>
+              </figure>
+            </div>
+            <div className="articles">
+              <figure className="vlog">
+                <img
+                  className="photosVlog"
+                  src="./images/Montagne.jpg"
+                  alt="montagne"
+                  width="40%"
+                />
+                <time>15/04/2022 8:00</time>
+                <figcaption className="légendeArticle">
+                  Cette montagne de sable... magnifique ! heureux d'y être aller
+                  avec Percy !
+                </figcaption>
+              </figure>
+            </div>
           </div>
+
+          <div className="messagesLecteurs">
+            <h3>Messages des lecteurs</h3>
+            <div className="messageLecteur">
+              {messages.map((groupeMessage, index) => (
+                <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
+                  {groupeMessage.map((message, i) => (
+                    <li key={i} className="messages">
+                      {message}
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </div>
+          <Burger />
+          <Modal
+            isShowing={isShowing}
+            toggle={toggle}
+            handleSubmit={handleSubmit}
+            setUserInput={setUserInput}
+            messages={messages}
+            setUserInputs={setUserInputs}
+            setUserInpute={setUserInpute}
+          />
         </div>
-        <Burger />
-        <Modal
-          isShowing={isShowing}
-          toggle={toggle}
-          handleSubmit={handleSubmit}
-          setUserInput={setUserInput}
-          messages={messages}
-          setUserInputs={setUserInputs}
-          setUserInpute={setUserInpute}
-        />
       </div>
     </section>
   );

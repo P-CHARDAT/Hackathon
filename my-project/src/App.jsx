@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Accueil from "./components/Accueil/Accueil";
 import { Switch, Route, useHistory } from "react-router-dom";
 import Percy from "./components/Percy/Percy";
@@ -8,10 +8,26 @@ import useModal from "./components/Modal/useModal.jsx";
 import useModalHeader from "./components/ModalHeader/useModalHeader.jsx";
 
 function App() {
+  // useEffect(() => {
+  //   fetch(
+  //     "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=25&camera=MAST&page=1&api_key=0F7LCSVWxdcpoA75zROijk3DT3Yz0fikP6bFVD6M"
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const idToSearch = [506156, 506157, 506159, 506144];
+  //       let myData = [];
+  //       myData = data.photos.filter(
+  //         (item) => idToSearch.indexOf(item.id) !== -1
+  //       );
+  //       console.log(myData);
+  //       setNasaData(myData);
+  //     });
+  // }, []);
   // Pour composant Header
   const [isShowingHeader, toggleHeader] = useModalHeader();
   // Pour composant Percy
   const [isShowing, toggle] = useModal();
+  const [count, setCount] = useState(0);
 
   const [messages, setMessages] = useState([[]]);
   const [messagesDefis, setMessagesDefis] = useState([[]]);
@@ -66,10 +82,14 @@ function App() {
             toggleHeader={toggleHeader}
             versPercy={versPercy}
             versGinny={versGinny}
+            count={count}
+            setCount={setCount}
           />
         </Route>
         <Route path="/ginny">
           <Ginny
+          count={count}
+          setCount={setCount}
             messages={messages}
             messagesDefis={messagesDefis}
             setMessagesDefis={setMessagesDefis}

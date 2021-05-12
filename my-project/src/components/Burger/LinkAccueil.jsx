@@ -5,7 +5,7 @@ import "./Burger.css";
 export default function LinkAccueil({ navbarOpen }) {
   return (
     <li className={`accueil ${navbarOpen ? "" : "showMenu0"}`}>
-      <Link exact to="/" padding="50px">
+      <Link exact to="/">
         Accueil
       </Link>
     </li>

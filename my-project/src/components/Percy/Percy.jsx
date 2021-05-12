@@ -46,7 +46,8 @@ export default function Percy({
                 {groupeMessage.map((message, i) => (
                   <li key={i} className="messages">
                     {message}
-                    {/* <button onClick={() => remove(i)}>X</button> */}
+                   
+                    <input type="checkbox"></input>
                   </li>
                 ))}
               </ul>

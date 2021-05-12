@@ -14,9 +14,9 @@ let Modal = ({
   setUserInpute,
   handleSubmit,
 
-  count,
-  setCount,
-}) =>
+
+}) => 
+
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -24,8 +24,7 @@ let Modal = ({
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                  <h4>titreModal</h4>
-
+                  <h4>Votre défi</h4>
                   <div className="formulaire">
                     <form onSubmit={handleSubmit}>
                       <input
@@ -56,13 +55,15 @@ let Modal = ({
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute(
-                            "Son défi pour vous !  : " + event.target.value
-                          )
+
+                          setUserInpute("Un nouveau défi à relever  : " + event.target.value)
                         }
                         required
                       />
-                      <button>Valider</button>
+                      <button className="Valider">
+                        Valider
+                      </button>
+
                     </form>
                   </div>
 
@@ -73,7 +74,6 @@ let Modal = ({
                   >
                     <span>&times;</span>
                   </button>
-                  <div className="modal-body">textModal</div>
                 </div>
               </div>
             </div>

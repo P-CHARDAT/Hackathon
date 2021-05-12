@@ -14,6 +14,7 @@
   box-shadow: 8px 8px 5px rgb(255, 255, 255);
   margin-top: 4%;
   max-width: 12vw;
+  z-index: 10;
   cursor: pointer;
 
 }
@@ -49,6 +50,7 @@
   margin-top: 4%;
   max-width: 12vw;
   cursor: pointer;
+  z-index: 10;
 }
 .ginny:hover {
   transition: 0.5s;
@@ -125,22 +127,26 @@ svg {
 
 @media screen and (max-width: 414px) {
   .hautPage {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hautPage {
     margin-bottom: 8%;
   }
   .percy {
-    max-width: 100vw;
+    max-width: 70vw;
   }
   .logo {
-    max-width: 100vw;
+    max-width: 70vw;
   }
   .ginny {
-    max-width: 100vw;
+    max-width: 70vw;
   }
   /* animation cercle */
 
   .circle {
-    width: 343px;
-    height: 343px;
+    width: 340px;
+    height: 340px;
     top: 53%;
     left: 49%;
   }

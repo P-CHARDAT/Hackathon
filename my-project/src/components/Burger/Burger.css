@@ -1,7 +1,9 @@
 .navBar {
   position: relative;
 }
-
+Link{
+  margin: 500px;
+}
 .navBar button {
   position: fixed;
   right: 1%;

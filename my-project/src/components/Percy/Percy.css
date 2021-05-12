@@ -71,6 +71,18 @@ h2 {
     text-align: left;
   }
 
+
+
+.lesDefis  button{
+    margin: 5px;
+    transition-duration: 0.4s;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px black;
+    }
+    .lesDefis button:hover {
+        background-color: #8f4726; 
+        color: white;
+      }
   @media screen and (max-width: 414px) {
     .defisPercy {
         font-size: 17px;

@@ -5,14 +5,19 @@ import "./Modal.css";
 
 let Modal = ({
   isShowing,
-  toggle,
+  hide,
+  titreModal,
+  textModal,
   userInput,
+  handleSubmit,
+  messages,
   setUserInput,
   userInputs,
   userInpute,
   setUserInputs,
   setUserInpute,
-  handleSubmit
+  versPerseverance,
+  versPercy,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -21,28 +26,10 @@ let Modal = ({
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                  <h4>titreModal</h4>
+                  <h4>{titreModal}</h4>
 
                   <div className="formulaire">
-<<<<<<< HEAD
-                      <div
-                        className="wrapperChoixPercy">
-                        <button className="ChoixPercy">
-                          <span>Percy</span>
-                        </button>
-
-                      </div>
-                      <div className="wrapperChoixPerseverance">
-                        <button
-                          className="ChoixPerseverance">
-                         
-                          <span>Perseverance</span>
-                        </button>
-                      </div>
                     <form >
-=======
-                    <form onSubmit={handleSubmit}>
->>>>>>> dev
                       <input
                         type="text"
                         placeholder="Votre nom ?"
@@ -71,18 +58,26 @@ let Modal = ({
                           )
                         }
                       />
-                      <button>Valider</button>
+                     
+                      <div className="wrapperChoixPerseverance">
+                        <button
+                          className="ChoixPerseverance"
+                          onClick={versPerseverance}>
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
+
                     </form>
                   </div>
 
                   <button
                     type="button"
                     className="modal-close-button"
-                    onClick={toggle}
+                    onClick={hide}
                   >
                     <span>&times;</span>
                   </button>
-                  <div className="modal-body">textModal</div>
+                  <div className="modal-body">{textModal}</div>
                 </div>
               </div>
             </div>

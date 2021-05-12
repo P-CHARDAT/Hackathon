@@ -17,7 +17,6 @@ export default function Ginny({
   isShowingHeader,
   toggleHeader,
   versPercy,
-
   versGinny,
   versPercyHeader,
   versGinnyHeader,

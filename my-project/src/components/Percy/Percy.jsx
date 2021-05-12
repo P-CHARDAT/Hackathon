@@ -73,9 +73,6 @@ export default function Percy({
         </div>
       </div>
 
-      <div>
-
-        <div className="maVie"></div>
         <div className="messagesRobots">
           <h3 className="messageGinny">Messages de Percy</h3>
           <div className="articles">

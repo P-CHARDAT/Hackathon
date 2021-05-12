@@ -72,17 +72,16 @@ h2 {
   }
 
 
+  .defisPercy > button{
+ color: rgb(17, 1, 1);
+ border-radius: 10px;
+ cursor: pointer;
+}
+.defisPercy > button:hover{
+  background-color: rgb(185, 108, 6);
 
-.lesDefis  button{
-    margin: 5px;
-    transition-duration: 0.4s;
-    border-radius: 50px;
-    box-shadow: 1px 1px 1px black;
-    }
-    .lesDefis button:hover {
-        background-color: #8f4726; 
-        color: white;
-      }
+}
+
   @media screen and (max-width: 414px) {
     .defisPercy {
         font-size: 17px;
@@ -106,3 +105,8 @@ h2 {
         font-size: 150%;
     }
   }
+
+
+ 
+  
+  

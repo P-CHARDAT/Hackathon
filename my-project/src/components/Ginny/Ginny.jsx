@@ -5,22 +5,29 @@ import "./Ginny.css";
 import Header from "../Header/Header";
 
 export default function Ginny({
+  isShowing,
+  toggle,
   messages,
   messagesDefis,
-  setMessagesDefis,
+  // setMessagesDefis,
+  handleSubmit,
+  setUserInput,
+  setUserInpute,
+  setUserInputs,
   isShowingHeader,
   toggleHeader,
   versPercy,
+
   versGinny,
   versPercyHeader,
   versGinnyHeader,
 }) {
   // const [isShowing, toggle] = useModal();
-  const remove = (i) => {
-    const updatedDefis = [...messagesDefis];
-    updatedDefis.splice(i, 1);
-    setMessagesDefis(updatedDefis);
-  };
+  // const remove = (i) => {
+  //   const updatedDefis = [...messagesDefis];
+  //   updatedDefis.splice(i, 1);
+  //   setMessagesDefis(updatedDefis);
+  // };
 
   return (
     <section className="backgroundGinny">
@@ -38,6 +45,7 @@ export default function Ginny({
           <div className="defi">
             <h2>Ses défis !</h2>
             <div className="lesDefis">
+            <button onClick={toggle}>Tchater avec Percy</button>
               {messagesDefis.map((groupeMessage, index) => (
                 <ul
                   key={index}
@@ -46,7 +54,7 @@ export default function Ginny({
                   {groupeMessage.map((message, i) => (
                     <li key={i} className="messages">
                       {message}
-                      <button onClick={() => remove(i)}>X</button>
+                      {/* <button onClick={() => remove(i)}>X</button> */}
                     </li>
                   ))}
                 </ul>

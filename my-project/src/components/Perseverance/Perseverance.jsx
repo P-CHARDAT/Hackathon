@@ -2,8 +2,13 @@ import React from "react";
 // import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import "./Perseverance.css";
+import Header from "../Header/Header";
 
-export default function Perseverance({messages, messagesDefis, setMessagesDefis}) {
+export default function Perseverance({
+  messages,
+  messagesDefis,
+  setMessagesDefis,
+}) {
   // const [isShowing, toggle] = useModal();
   const remove = (i) => {
     const updatedDefis = [...messagesDefis];
@@ -12,22 +17,32 @@ export default function Perseverance({messages, messagesDefis, setMessagesDefis}
   };
 
   return (
-    <div>
-      <h1>Persévérance</h1>
-      <div className="defi">
-      <h2>Mes défis !</h2>
-        <div className="lesDefis">
-          {messagesDefis.map((groupeMessage, index) => (
-            <ul key={index} className={index % 2 === 0 ? "pair1" : "impair1"}>
-              {groupeMessage.map((message, i) => (
-                <li key={i} className="messages">
-                  {message}
-                  <button onClick={() => remove(i)}>X</button>
-                </li>
+    <section className="backgroundGinny">
+      <div>
+        <Header />
+        <div className="defisGinny">
+          <h1 className="ginnyTitle">Ginny</h1>
+          <div className="defi">
+            <h2>Ses défis !</h2>
+            <div className="lesDefis">
+              {messagesDefis.map((groupeMessage, index) => (
+                <ul
+                  key={index}
+                  className={index % 2 === 0 ? "pair1" : "impair1"}
+                >
+                  {groupeMessage.map((message, i) => (
+                    <li key={i} className="messages">
+                      {message}
+                      <button onClick={() => remove(i)}>X</button>
+                    </li>
+                  ))}
+                </ul>
               ))}
-            </ul>
-          ))}
+            </div>
+            <p>Appeler le composant défi ici.</p>
+          </div>
         </div>
+<<<<<<< HEAD
         <p>Appeler le composant défi ici.</p>
       </div>
       <div>
@@ -40,9 +55,28 @@ export default function Perseverance({messages, messagesDefis, setMessagesDefis}
         <p>Appeler le fil d'actualités de perseverance ici </p>
         <p>Ici appeler les messages de soutien des gens sur le site</p>
       <h3>Les messages de mes lecteur !</h3>
+=======
+        <div className="messagesRobots">
+          <h3>Les messages des robots</h3>
+          <div className="messageRobot"></div>
+        </div>
+        <div className="messagesLecteurs">
+          <h3>Les messages de mes lecteur</h3>
+          <div className="messageLecteur">
+            {messages.map((groupeMessage, index) => (
+              <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
+                {groupeMessage.map((message, i) => (
+                  <li key={i} className="messages">
+                    {message}
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+        </div>
+        <Burger />
+>>>>>>> dev
       </div>
-
-      <Burger />
-    </div>
+    </section>
   );
 }

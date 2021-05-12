@@ -110,6 +110,8 @@ function App() {
             toggleHeader={toggleHeader}
             versPercy={versPercy}
             versGinny={versGinny}
+            versPercyHeader={versPercyHeader}
+            versGinnyHeader={versGinnyHeader}
           />
         </Route>
       </Switch>

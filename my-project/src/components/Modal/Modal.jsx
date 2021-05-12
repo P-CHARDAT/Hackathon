@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ReactDOM from "react-dom";
 import "./Modal.css";
@@ -59,9 +59,7 @@ let Modal = ({
                         }
                         required
                       />
-                      <button onClick={() => setCount(count + 1)}>
-                        Valider
-                      </button>
+                      <button onClick={() => setCount(count + 1)}> Valider</button>
                     </form>
                   </div>
 

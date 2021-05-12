@@ -3,6 +3,7 @@ import React from "react";
 import Burger from "../Burger/Burger";
 import "./Ginny.css";
 import Header from "../Header/Header";
+import Checkbox from "./Checkbox.jsx"
 
 export default function Ginny({
   isShowing,
@@ -94,6 +95,10 @@ export default function Ginny({
                 alt="montagne"
                 width="40%"
               />
+             
+              
+            
+  
             <time>15/04/2022 8:00</time>
               <figcaption className="légendeArticle">
                 Cette montagne de sable... magnifique ! heureux d'y être aller

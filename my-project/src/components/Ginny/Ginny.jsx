@@ -43,9 +43,9 @@ export default function Ginny({
         <div className="defisGinny">
           <h1 className="ginnyTitle">Ginny</h1>
           <div className="defi">
-            <h2>Ses défis !</h2>
+            <h2>Ses défis ! ⤵</h2>
             <div className="lesDefis">
-            <button onClick={toggle}>Tchater avec Percy</button>
+              <button onClick={toggle}>Tchater avec Percy</button>
               {messagesDefis.map((groupeMessage, index) => (
                 <ul
                   key={index}
@@ -60,29 +60,26 @@ export default function Ginny({
                 </ul>
               ))}
             </div>
-            <p>Appeler le composant défi ici.</p>
           </div>
         </div>
-        <p>Appeler le composant défi ici.</p>
       </div>
       <div>
         <div className="maVie"></div>
-        <p>Appeler le fil d'actualités de perseverance ici </p>
-        <p>Ici appeler les messages de soutien des gens sur le site</p>
-        <h3>Les messages de mes lecteur !</h3>
         <div className="messagesRobots">
           <h3 className="messageGinny">Messages de Ginny</h3>
           <div className="articles">
             <figure className="vlog">
               <img
                 className="photosVlog"
-                src="./images/patate.png"
-                alt="patate"
+                src="./images/ovni.jpg"
+                alt="ovni"
                 width="70%"
               />
-            <time>13/04/2022 15:00</time>
+              <time>16/04/2022 13:58</time>
               <figcaption className="légendeArticle">
-                Mes premières patate de Mars ! Trop content !
+                Une visite inopinée et éclaire d'un étrange objet non identifié.
+                Je sens qu'un frisson vous pour parcours le dos. Pour les
+                septiques, je vous laisse résoudre cette mystérieuse apparition.
               </figcaption>
             </figure>
           </div>
@@ -90,14 +87,16 @@ export default function Ginny({
             <figure className="vlog">
               <img
                 className="photosVlog"
-                src="./images/Montagne.jpg"
+                src="./images/modeemploipercy.jpg"
                 alt="montagne"
-                width="40%"
+                width="60%"
               />
-            <time>15/04/2022 8:00</time>
+              <time>26/04/2022 5:12</time>
               <figcaption className="légendeArticle">
-                Cette montagne de sable... magnifique ! heureux d'y être aller
-                avec Percy !
+                Percy a reçu une météorite sur sa supercam. Il se retrouve
+                borgne... J'ai ressorti son mode d'emploi. C'est parti pour le
+                remplacement de pièces. Une petite distraction qui devrait bien
+                me prendre 24h... Souhaitez moi du courage.
               </figcaption>
             </figure>
           </div>

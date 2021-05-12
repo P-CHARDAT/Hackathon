@@ -8,7 +8,6 @@ import useModal from "./components/Modal/useModal.jsx";
 import useModalHeader from "./components/ModalHeader/useModalHeader.jsx";
 
 function App() {
-
   // const [nasaData, setNasaData] = useState([]);
 
   // useEffect(() => {
@@ -101,8 +100,8 @@ function App() {
         </Route>
         <Route path="/ginny">
           <Ginny
-          count={count}
-          setCount={setCount}
+            count={count}
+            setCount={setCount}
             messages={messages}
             messagesDefis={messagesDefis}
             setMessagesDefis={setMessagesDefis}
@@ -110,6 +109,8 @@ function App() {
             toggleHeader={toggleHeader}
             versPercy={versPercy}
             versGinny={versGinny}
+            versPercyHeader={versPercyHeader}
+            versGinnyHeader={versGinnyHeader}
           />
         </Route>
       </Switch>

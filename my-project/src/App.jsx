@@ -8,6 +8,9 @@ import useModal from "./components/Modal/useModal.jsx";
 import useModalHeader from "./components/ModalHeader/useModalHeader.jsx";
 
 function App() {
+
+  // const [nasaData, setNasaData] = useState([]);
+
   // useEffect(() => {
   //   fetch(
   //     "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=25&camera=MAST&page=1&api_key=0F7LCSVWxdcpoA75zROijk3DT3Yz0fikP6bFVD6M"
@@ -23,6 +26,7 @@ function App() {
   //       setNasaData(myData);
   //     });
   // }, []);
+
   // Pour composant Header
   const [isShowingHeader, toggleHeader] = useModalHeader();
   // Pour composant Percy
@@ -47,12 +51,17 @@ function App() {
   };
   let history = useHistory();
   const versPercy = () => {
-    // handleSubmit();
     history.push("/percy");
   };
-
+  const versPercyHeader = () => {
+    toggleHeader();
+    history.push("/percy");
+  };
   const versGinny = () => {
-    // handleSubmit();
+    history.push("/ginny");
+  };
+  const versGinnyHeader = () => {
+    toggleHeader();
     history.push("/ginny");
   };
 
@@ -65,6 +74,8 @@ function App() {
             toggleHeader={toggleHeader}
             versPercy={versPercy}
             versGinny={versGinny}
+            versPercyHeader={versPercyHeader}
+            versGinnyHeader={versGinnyHeader}
           />
         </Route>
         <Route path="/percy">
@@ -84,6 +95,8 @@ function App() {
             versGinny={versGinny}
             count={count}
             setCount={setCount}
+            versPercyHeader={versPercyHeader}
+            versGinnyHeader={versGinnyHeader}
           />
         </Route>
         <Route path="/ginny">

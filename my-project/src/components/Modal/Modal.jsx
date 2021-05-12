@@ -28,17 +28,37 @@ let Modal = ({
                   <h4>titreModal</h4>
 
                   <div className="formulaire">
+
+
+                      <div
+                        className="wrapperChoixPercy">
+                        <button className="ChoixPercy">
+                          <span>Percy</span>
+                        </button>
+
+                      </div>
+                      <div className="wrapperChoixPerseverance">
+                        <button
+                          className="ChoixPerseverance">
+                         
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
+                    <form >
+
                     <form onSubmit={handleSubmit}>
-                      <input
+
+                      <input className="NomIN"
                         type="text"
                         placeholder="Votre nom ?"
+
                         value={userInput}
                         onChange={(event) =>
                           setUserInput("Utilisateur : " + event.target.value)
                         }
                       />
 
-                      <input
+                      <input className="MessageIN"
                         type="texte"
                         value={userInputs}
                         onChange={(event) =>
@@ -47,14 +67,12 @@ let Modal = ({
                         placeholder="Votre message"
                       />
 
-                      <input
+                      <input className="INDefi"
                         type="texte"
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute(
-                            "Son défi pour vous !  : " + event.target.value
-                          )
+                          setUserInpute("Son défi pour vous !  : " + event.target.value)
                         }
                       />
                       <button onClick={() => setCount(count + 1)}>

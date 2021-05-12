@@ -1,10 +1,11 @@
-import React from "react";
-// import useModal from "../Modal/useModal.jsx";
+import React, { useState } from "react";
 import Burger from "../Burger/Burger";
 import Header from "../Header/Header";
 import "./Percy.css";
 import MapMessage from "./MapMessage";
 import Modal from "../Modal/Modal";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
 
 export default function Percy({
   isShowing,
@@ -28,6 +29,13 @@ export default function Percy({
     updatedDefis.splice(index, 1);
     setMessagesDefis(updatedDefis);
   };
+  // bouton like
+  const [handleClick, setHandleClick] = useState(false);
+  const [count, setCount] = useState(0);
+  function LikeClick() {
+    setHandleClick(!handleClick);
+    setCount(count + 1);
+  }
 
   return (
     <section className="backgroundPercy">
@@ -42,8 +50,14 @@ export default function Percy({
         />
         <div className="defisPercy">
           <h1 className="percyTitle">Percy</h1>
+
           <button className="tchatter"onClick={toggle}>Tchater avec Percy</button>
+    <p>Vous avez cliqué sur le bouton Like {count} fois </p>
           <h2>Ses défis ! ⤵</h2>
+
+         
+          
+
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
               <ul key={index} className={index % 2 === 0 ? "pair1" : "impair1"}>
@@ -57,6 +71,7 @@ export default function Percy({
             ))}
           </div>
         </div>
+
         <div>
           <div className="maVie"></div>
           <div className="messagesRobots">
@@ -71,12 +86,23 @@ export default function Percy({
                 />
                 <time>13/04/2022 15:00</time>
                 <figcaption className="légendeArticle">
+
                   Mes premières patates de Mars ! Trop content ! Je vous
                   confirme qu’il est possible de faire pousser des pommes de
                   terre ici, comme dans le blockbuster Seul sur Mars, avec Matt
                   Damon. Notamment en fertilisant la terre martienne, et donc
                   stérile, avec des excréments. 
+
                 </figcaption>
+                <button
+                  className="likeButton"
+                  id="checkbox"
+                  type="checkbox"
+                  onClick={LikeClick}
+                >
+                  {handleClick ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                  <label for="checkbox"></label>
+                </button>
               </figure>
             </div>
             <div className="articles">
@@ -96,6 +122,15 @@ export default function Percy({
                   découverte en 1971, ce fut le plus haut sommet connu du
                   système solaire.
                 </figcaption>
+                <button
+                  className="likeButton"
+                  id="checkbox"
+                  type="checkbox"
+                  onClick={LikeClick}
+                >
+                  {handleClick ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                  <label for="checkbox"></label>
+                </button>
               </figure>
             </div>
           </div>

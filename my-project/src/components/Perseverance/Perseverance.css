@@ -27,6 +27,11 @@
     color: rgb(0, 0, 0);
     font-size: 200%;
 }
+.messagesRobots > img{
+    width: 200px;
+
+
+}
 @media screen and (max-width: 414px) {
     .defisGinny{
         font-size: 17px;

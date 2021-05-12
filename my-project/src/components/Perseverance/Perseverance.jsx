@@ -42,23 +42,23 @@ export default function Perseverance({
             <p>Appeler le composant défi ici.</p>
           </div>
         </div>
-<<<<<<< HEAD
         <p>Appeler le composant défi ici.</p>
       </div>
       <div>
-        <div className="maVie">
-        <h2>Ma vie a moi :D</h2>
-        <img src="./images/patate.png" alt="patate" />
-        <p>Mes premières patate de Mars ! Trop content !</p>
-        </div>
+        <div className="maVie"></div>
 
         <p>Appeler le fil d'actualités de perseverance ici </p>
         <p>Ici appeler les messages de soutien des gens sur le site</p>
-      <h3>Les messages de mes lecteur !</h3>
-=======
+        <h3>Les messages de mes lecteur !</h3>
         <div className="messagesRobots">
           <h3>Les messages des robots</h3>
-          <div className="messageRobot"></div>
+
+          <img src="./images/patate.png" alt="patate" />
+          <time>13/04/2022 15:00</time>
+          <p>Mes premières patate de Mars ! Trop content !</p>
+        <img src="./images/Montagne.jpg" alt="montagne" width="200px"   />
+        <time>15/04/2022 8:00</time>
+        <p>Cette montagne de sable.. magnifique! heureux d'y être aller avec Percy !</p>
         </div>
         <div className="messagesLecteurs">
           <h3>Les messages de mes lecteur</h3>
@@ -75,7 +75,6 @@ export default function Perseverance({
           </div>
         </div>
         <Burger />
->>>>>>> dev
       </div>
     </section>
   );

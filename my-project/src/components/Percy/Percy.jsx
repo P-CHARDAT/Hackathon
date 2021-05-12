@@ -121,7 +121,7 @@ export default function Percy({
               <time>{nasaData[3].earth_date}</time>
               <figcaption className="légendeArticle">
                 Cette montagne de sable... magnifique ! Heureux d'y être aller
-                avec Percy ! Je vous présente Olympus Mons. Avec 21,9
+                avec Ginny ! Je vous présente Olympus Mons. Avec 21,9
                 kilomètres, l'énorme volcan bouclier est le plus haut sommet de
                 toute planète du système solaire. Pendant 40 ans, après sa
                 découverte en 1971, ce fut le plus haut sommet connu du système

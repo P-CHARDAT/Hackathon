@@ -6,8 +6,9 @@ import "./ModalHeader.css";
 let ModalHeader = ({
   isShowingHeader,
   toggleHeader,
-  versGinny,
-  versPercy,
+  versGinnyHeader,
+  versPercyHeader,
+  
 }) =>
   isShowingHeader
     ? ReactDOM.createPortal(
@@ -19,14 +20,14 @@ let ModalHeader = ({
                   <h4>Rendez leur visite !</h4>
 
                   <div className="wrapperChoixPercy">
-                    <button className="ChoixPercy" onClick={versPercy}>
+                    <button className="ChoixPercy" onClick={versPercyHeader}>
                       <span>Percy</span>
                     </button>
                   </div>
                   <div className="wrapperChoixPerseverance">
                     <button
                       className="ChoixPerseverance"
-                      onClick={versGinny}
+                      onClick={versGinnyHeader}
                     >
                       <span>Ginny</span>
                     </button>

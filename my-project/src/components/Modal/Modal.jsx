@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ReactDOM from "react-dom";
 import "./Modal.css";
@@ -13,7 +13,10 @@ let Modal = ({
   setUserInputs,
   setUserInpute,
   handleSubmit,
-}) =>
+
+  count,
+  setCount
+}) => 
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -25,9 +28,11 @@ let Modal = ({
 
                   <div className="formulaire">
                     <form onSubmit={handleSubmit}>
-                      <input
+
+                      <input className="NomIN"
                         type="text"
                         placeholder="Votre nom ?"
+
                         value={userInput}
                         onChange={(event) =>
                           setUserInput("Utilisateur : " + event.target.value)
@@ -35,7 +40,7 @@ let Modal = ({
                         required
                       />
 
-                      <input
+                      <input className="MessageIN"
                         type="texte"
                         value={userInputs}
                         onChange={(event) =>
@@ -45,18 +50,18 @@ let Modal = ({
                         required
                       />
 
-                      <input
+                      <input className="INDefi"
                         type="texte"
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute(
-                            "Son défi pour vous !  : " + event.target.value
-                          )
+                          setUserInpute("Son défi pour vous !  : " + event.target.value)
                         }
                         required
                       />
-                      <button>Valider</button>
+                      <button onClick={() => setCount(count + 1)}>
+                        Valider
+                      </button>
                     </form>
                   </div>
 

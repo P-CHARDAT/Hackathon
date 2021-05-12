@@ -62,6 +62,10 @@ function App() {
             setMessagesDefis={setMessagesDefis}
             setUserInputs={setUserInputs}
             setUserInpute={setUserInpute}
+            isShowingHeader={isShowingHeader}
+            toggleHeader={toggleHeader}
+            versPercy={versPercy}
+            versGinny={versGinny}
           />
         </Route>
         <Route path="/ginny">
@@ -69,6 +73,10 @@ function App() {
             messages={messages}
             messagesDefis={messagesDefis}
             setMessagesDefis={setMessagesDefis}
+            isShowingHeader={isShowingHeader}
+            toggleHeader={toggleHeader}
+            versPercy={versPercy}
+            versGinny={versGinny}
           />
         </Route>
       </Switch>

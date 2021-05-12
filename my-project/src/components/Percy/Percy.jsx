@@ -11,11 +11,15 @@ export default function Percy({
   toggle,
   messages,
   messagesDefis,
-  setMessagesDefis,
+  // setMessagesDefis,
   handleSubmit,
   setUserInput,
   setUserInpute,
   setUserInputs,
+  isShowingHeader,
+  toggleHeader,
+  versPercy,
+  versGinny,
 }) {
   // const remove = (i) => {
   //   const updatedDefis = [...messagesDefis];
@@ -26,10 +30,15 @@ export default function Percy({
   return (
     <section className="backgroundPercy">
       <div>
-        <Header />
+        <Header
+          isShowingHeader={isShowingHeader}
+          toggleHeader={toggleHeader}
+          versPercy={versPercy}
+          versGinny={versGinny}
+        />
         <div className="defisPercy">
-          <h1 className="percyTitle">Ginny</h1>
-          <button onClick={toggle}>Tchater avec Ginny</button>
+          <h1 className="percyTitle">Percy</h1>
+          <button onClick={toggle}>Tchater avec Percy</button>
           <h2>Ses défis !</h2>
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
@@ -47,7 +56,6 @@ export default function Percy({
             Appeler le composant défi ici. Il aura un state sauvegardant les
             données envoyées depuis le formulaire modal
           </p>
-          
         </div>
         <div className="messagesRobots">
           <h3>Les messages des robots</h3>
@@ -65,21 +73,19 @@ export default function Percy({
                 ))}
               </ul>
             ))}
-
           </div>
         </div>
         <Burger />
+        <Modal
+          isShowing={isShowing}
+          toggle={toggle}
+          handleSubmit={handleSubmit}
+          setUserInput={setUserInput}
+          messages={messages}
+          setUserInputs={setUserInputs}
+          setUserInpute={setUserInpute}
+        />
       </div>
-      <Burger />
-      <Modal
-        isShowing={isShowing}
-        toggle={toggle}
-        handleSubmit={handleSubmit}
-        setUserInput={setUserInput}
-        messages={messages}
-        setUserInputs={setUserInputs}
-        setUserInpute={setUserInpute}
-      />
-    </div>
+    </section>
   );
 }

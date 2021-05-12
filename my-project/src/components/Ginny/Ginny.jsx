@@ -1,20 +1,18 @@
 import React from "react";
 // import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
-<<<<<<< HEAD:my-project/src/components/Ginny/Ginny.jsx
 import "./Ginny.css";
-
-export default function Ginny({messages, messagesDefis, setMessagesDefis}) {
-=======
-import "./Perseverance.css";
 import Header from "../Header/Header";
 
-export default function Perseverance({
+export default function Ginny({
   messages,
   messagesDefis,
   setMessagesDefis,
+  isShowingHeader,
+  toggleHeader,
+  versPercy,
+  versGinny,
 }) {
->>>>>>> dev:my-project/src/components/Perseverance/Perseverance.jsx
   // const [isShowing, toggle] = useModal();
   const remove = (i) => {
     const updatedDefis = [...messagesDefis];
@@ -25,7 +23,12 @@ export default function Perseverance({
   return (
     <section className="backgroundGinny">
       <div>
-        <Header />
+        <Header
+          isShowingHeader={isShowingHeader}
+          toggleHeader={toggleHeader}
+          versPercy={versPercy}
+          versGinny={versGinny}
+        />
         <div className="defisGinny">
           <h1 className="ginnyTitle">Ginny</h1>
           <div className="defi">

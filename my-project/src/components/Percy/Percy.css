@@ -10,16 +10,6 @@ h2 {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-.messageLecteur {
-  background-color: rgba(223, 59, 443, 0.2);
-  border-radius: 40px;
-}
-
-.hide-remove-button {
-  display: none;
-}
-=======
 .messageLecteur{
     background-color: rgba(223, 59, 443, 0.2);
     border-radius: 40px;
@@ -104,4 +94,3 @@ h2 {
         font-size: 150%;
     }
   }
->>>>>>> dev

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Burger.css";
 
-export default function LinkPerseverance({ navbarOpen }) {
+export default function LinkGinny({ navbarOpen }) {
   return (
     <li className={`perse ${navbarOpen ? "" : "showMenu0"}`}>
-      <Link to="/perseverance">Persévérance</Link>
+      <Link to="/ginny">Ginny</Link>
     </li>
   );
 }

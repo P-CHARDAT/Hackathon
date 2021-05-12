@@ -5,14 +5,19 @@ import "./Modal.css";
 
 let Modal = ({
   isShowing,
-  toggle,
+  hide,
+  titreModal,
+  textModal,
   userInput,
+  handleSubmit,
+  messages,
   setUserInput,
   userInputs,
   userInpute,
   setUserInputs,
   setUserInpute,
-  handleSubmit
+  versPerseverance,
+  versPercy,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -21,39 +26,20 @@ let Modal = ({
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                  <h4>titreModal</h4>
+                  <h4>{titreModal}</h4>
 
                   <div className="formulaire">
-
-                      <div
-                        className="wrapperChoixPercy">
-                        <button className="ChoixPercy">
-                          <span>Percy</span>
-                        </button>
-
-                      </div>
-                      <div className="wrapperChoixPerseverance">
-                        <button
-                          className="ChoixPerseverance">
-                         
-                          <span>Perseverance</span>
-                        </button>
-                      </div>
                     <form >
-
-                    <form onSubmit={handleSubmit}>
-
-                      <input className="NomIN"
+                      <input
                         type="text"
                         placeholder="Votre nom ?"
-
                         value={userInput}
                         onChange={(event) =>
                           setUserInput("Utilisateur : " + event.target.value)
                         }
                       />
 
-                      <input className="MessageIN"
+                      <input
                         type="texte"
                         value={userInputs}
                         onChange={(event) =>
@@ -62,26 +48,36 @@ let Modal = ({
                         placeholder="Votre message"
                       />
 
-                      <input className="INDefi"
+                      <input
                         type="texte"
                         placeholder="Soumettre votre défi!"
                         value={userInpute}
                         onChange={(event) =>
-                          setUserInpute("Son défi pour vous !  : " + event.target.value)
+                          setUserInpute(
+                            "Son défi pour vous !  : " + event.target.value
+                          )
                         }
                       />
-                      <button>Valider</button>
+                     
+                      <div className="wrapperChoixPerseverance">
+                        <button
+                          className="ChoixPerseverance"
+                          onClick={versPerseverance}>
+                          <span>Perseverance</span>
+                        </button>
+                      </div>
+
                     </form>
                   </div>
 
                   <button
                     type="button"
                     className="modal-close-button"
-                    onClick={toggle}
+                    onClick={hide}
                   >
                     <span>&times;</span>
                   </button>
-                  <div className="modal-body">textModal</div>
+                  <div className="modal-body">{textModal}</div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,4 @@
 import React from "react";
-// import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
 import Header from "../Header/Header";
 import "./Percy.css";

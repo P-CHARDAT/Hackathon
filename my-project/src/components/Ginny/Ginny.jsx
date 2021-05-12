@@ -3,17 +3,18 @@ import React from "react";
 import Burger from "../Burger/Burger";
 import "./Ginny.css";
 import Header from "../Header/Header";
+import ModalGinny from "../ModalGinny/ModalGinny";
 
 export default function Ginny({
-  isShowing,
-  toggle,
-  messages,
-  messagesDefis,
-  // setMessagesDefis,
-  handleSubmit,
-  setUserInput,
-  setUserInpute,
-  setUserInputs,
+  isShowingGinny,
+  toggleGinny,
+  messagesGinny,
+  messagesDefisGinny,
+  setMessagesDefisGinny,
+  handleSubmitGinny,
+  setUserInputGinny,
+  setUserInputeGinny,
+  setUserInputsGinny,
   isShowingHeader,
   toggleHeader,
   versPercy,
@@ -21,13 +22,11 @@ export default function Ginny({
   versPercyHeader,
   versGinnyHeader,
 }) {
-  // const [isShowing, toggle] = useModal();
-  // const remove = (i) => {
-  //   const updatedDefis = [...messagesDefis];
-  //   updatedDefis.splice(i, 1);
-  //   setMessagesDefis(updatedDefis);
-  // };
-
+  const removeGinny = (index) => {
+    const updatedDefisGinny = [...messagesDefisGinny];
+    updatedDefisGinny.splice(index, 1);
+    setMessagesDefisGinny(updatedDefisGinny);
+  };
   return (
     <section className="backgroundGinny">
       <div>
@@ -41,11 +40,11 @@ export default function Ginny({
         />
         <div className="defisGinny">
           <h1 className="ginnyTitle">Ginny</h1>
+          <button onClick={toggleGinny}>Tchater avec Percy</button>
           <div className="defi">
             <h2>Ses défis !</h2>
             <div className="lesDefis">
-            <button onClick={toggle}>Tchater avec Percy</button>
-              {messagesDefis.map((groupeMessage, index) => (
+              {messagesDefisGinny.map((groupeMessage, index) => (
                 <ul
                   key={index}
                   className={index % 2 === 0 ? "pair1" : "impair1"}
@@ -53,7 +52,7 @@ export default function Ginny({
                   {groupeMessage.map((message, i) => (
                     <li key={i} className="messages">
                       {message}
-                      {/* <button onClick={() => remove(i)}>X</button> */}
+                      <button onClick={() => removeGinny(index)}>X</button>
                     </li>
                   ))}
                 </ul>
@@ -79,7 +78,7 @@ export default function Ginny({
                 alt="patate"
                 width="70%"
               />
-            <time>13/04/2022 15:00</time>
+              <time>13/04/2022 15:00</time>
               <figcaption className="légendeArticle">
                 Mes premières patate de Mars ! Trop content !
               </figcaption>
@@ -93,7 +92,7 @@ export default function Ginny({
                 alt="montagne"
                 width="40%"
               />
-            <time>15/04/2022 8:00</time>
+              <time>15/04/2022 8:00</time>
               <figcaption className="légendeArticle">
                 Cette montagne de sable... magnifique ! heureux d'y être aller
                 avec Percy !
@@ -104,7 +103,7 @@ export default function Ginny({
         <div className="messagesLecteurs">
           <h3>Messages des lecteurs</h3>
           <div className="messageLecteur">
-            {messages.map((groupeMessage, index) => (
+            {messagesGinny.map((groupeMessage, index) => (
               <ul key={index} className={index % 2 === 0 ? "pair" : "impair"}>
                 {groupeMessage.map((message, i) => (
                   <li key={i} className="messages">
@@ -116,6 +115,15 @@ export default function Ginny({
           </div>
         </div>
         <Burger />
+        <ModalGinny
+          isShowingGinny={isShowingGinny}
+          toggleGinny={toggleGinny}
+          handleSubmitGinny={handleSubmitGinny}
+          setUserInputGinny={setUserInputGinny}
+          messagesGinny={messagesGinny}
+          setUserInputsGinny={setUserInputsGinny}
+          setUserInputeGinny={setUserInputeGinny}
+        />
       </div>
     </section>
   );

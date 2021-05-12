@@ -6,9 +6,9 @@ import Percy from "./components/Percy/Percy";
 import Ginny from "./components/Ginny/Ginny";
 import useModal from "./components/Modal/useModal.jsx";
 import useModalHeader from "./components/ModalHeader/useModalHeader.jsx";
+import useModalGinny from "./components/ModalGinny/useModalGinny.jsx";
 
 function App() {
-
   // const [nasaData, setNasaData] = useState([]);
 
   // useEffect(() => {
@@ -31,13 +31,22 @@ function App() {
   const [isShowingHeader, toggleHeader] = useModalHeader();
   // Pour composant Percy
   const [isShowing, toggle] = useModal();
+  // Pour composant Ginny
+  const [isShowingGinny, toggleGinny] = useModalGinny();
   const [count, setCount] = useState(0);
-
+  // Pour Percy
   const [messages, setMessages] = useState([[]]);
   const [messagesDefis, setMessagesDefis] = useState([[]]);
   const [userInput, setUserInput] = useState("");
   const [userInpute, setUserInpute] = useState("");
   const [userInputs, setUserInputs] = useState("");
+  // Pour Ginny
+  const [messagesGinny, setMessagesGinny] = useState([[]]);
+  const [messagesDefisGinny, setMessagesDefisGinny] = useState([[]]);
+  const [userInputGinny, setUserInputGinny] = useState("");
+  const [userInputeGinny, setUserInputeGinny] = useState("");
+  const [userInputsGinny, setUserInputsGinny] = useState("");
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -49,6 +58,18 @@ function App() {
     );
     toggle();
   };
+
+  const handleSubmitGinny = (event) => {
+    event.preventDefault();
+    setUserInputGinny("");
+    setMessagesGinny([...messagesGinny, [userInputGinny, userInputsGinny]]);
+    setMessagesDefisGinny([...messagesDefisGinny, [userInputeGinny]]);
+    alert(
+      "The state is going to be updated, the User interface will be updated"
+    );
+    toggleGinny();
+  };
+
   let history = useHistory();
   const versPercy = () => {
     history.push("/percy");
@@ -101,11 +122,17 @@ function App() {
         </Route>
         <Route path="/ginny">
           <Ginny
-          count={count}
-          setCount={setCount}
-            messages={messages}
-            messagesDefis={messagesDefis}
-            setMessagesDefis={setMessagesDefis}
+            isShowingGinny={isShowingGinny}
+            toggleGinny={toggleGinny}
+            count={count}
+            setCount={setCount}
+            handleSubmitGinny={handleSubmitGinny}
+            messagesGinny={messagesGinny}
+            messagesDefisGinny={messagesDefisGinny}
+            setMessagesDefisGinny={setMessagesDefisGinny}
+            setUserInputGinny={setUserInputGinny}
+            setUserInputsGinny={setUserInputsGinny}
+            setUserInputeGinny={setUserInputeGinny}
             isShowingHeader={isShowingHeader}
             toggleHeader={toggleHeader}
             versPercy={versPercy}

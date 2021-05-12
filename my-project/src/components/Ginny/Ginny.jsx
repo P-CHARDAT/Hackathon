@@ -12,6 +12,8 @@ export default function Ginny({
   toggleHeader,
   versPercy,
   versGinny,
+  versPercyHeader,
+  versGinnyHeader,
 }) {
   // const [isShowing, toggle] = useModal();
   const remove = (i) => {
@@ -28,6 +30,8 @@ export default function Ginny({
           toggleHeader={toggleHeader}
           versPercy={versPercy}
           versGinny={versGinny}
+          versPercyHeader={versPercyHeader}
+          versGinnyHeader={versGinnyHeader}
         />
         <div className="defisGinny">
           <h1 className="ginnyTitle">Ginny</h1>

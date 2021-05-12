@@ -1,13 +1,17 @@
 import React from "react";
 // import useModal from "../Modal/useModal.jsx";
 import Burger from "../Burger/Burger";
-import "./Perseverance.css";
+import "./Ginny.css";
 import Header from "../Header/Header";
 
-export default function Perseverance({
+export default function Ginny({
   messages,
   messagesDefis,
   setMessagesDefis,
+  isShowingHeader,
+  toggleHeader,
+  versPercy,
+  versGinny,
 }) {
   // const [isShowing, toggle] = useModal();
   const remove = (i) => {
@@ -19,7 +23,12 @@ export default function Perseverance({
   return (
     <section className="backgroundGinny">
       <div>
-        <Header />
+        <Header
+          isShowingHeader={isShowingHeader}
+          toggleHeader={toggleHeader}
+          versPercy={versPercy}
+          versGinny={versGinny}
+        />
         <div className="defisGinny">
           <h1 className="ginnyTitle">Ginny</h1>
           <div className="defi">

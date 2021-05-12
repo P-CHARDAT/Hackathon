@@ -3,21 +3,42 @@ import React from "react";
 import Burger from "../Burger/Burger";
 import Header from "../Header/Header";
 import "./Percy.css";
+import MapMessage from "./MapMessage";
+import Modal from "../Modal/Modal";
 
-export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
-  // const [isShowing, toggle] = useModal();
-  const remove = (i) => {
-    const updatedDefis = [...messagesDefis];
-    updatedDefis.splice(i, 1);
-    setMessagesDefis(updatedDefis);
-  };
+export default function Percy({
+  isShowing,
+  toggle,
+  messages,
+  messagesDefis,
+  // setMessagesDefis,
+  handleSubmit,
+  setUserInput,
+  setUserInpute,
+  setUserInputs,
+  isShowingHeader,
+  toggleHeader,
+  versPercy,
+  versGinny,
+}) {
+  // const remove = (i) => {
+  //   const updatedDefis = [...messagesDefis];
+  //   updatedDefis.splice(i, 1);
+  //   setMessagesDefis(updatedDefis);
+  // };
 
   return (
     <section className="backgroundPercy">
       <div>
-        <Header />
+        <Header
+          isShowingHeader={isShowingHeader}
+          toggleHeader={toggleHeader}
+          versPercy={versPercy}
+          versGinny={versGinny}
+        />
         <div className="defisPercy">
           <h1 className="percyTitle">Percy</h1>
+          <button onClick={toggle}>Tchater avec Percy</button>
           <h2>Ses défis !</h2>
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
@@ -25,7 +46,7 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
                 {groupeMessage.map((message, i) => (
                   <li key={i} className="messages">
                     {message}
-                    <button onClick={() => remove(i)}>X</button>
+                    {/* <button onClick={() => remove(i)}>X</button> */}
                   </li>
                 ))}
               </ul>
@@ -35,7 +56,6 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
             Appeler le composant défi ici. Il aura un state sauvegardant les
             données envoyées depuis le formulaire modal
           </p>
-          
         </div>
         <div className="messagesRobots">
           <h3>Les messages des robots</h3>
@@ -53,10 +73,18 @@ export default function Percy({ messages, messagesDefis, setMessagesDefis }) {
                 ))}
               </ul>
             ))}
-
           </div>
         </div>
         <Burger />
+        <Modal
+          isShowing={isShowing}
+          toggle={toggle}
+          handleSubmit={handleSubmit}
+          setUserInput={setUserInput}
+          messages={messages}
+          setUserInputs={setUserInputs}
+          setUserInpute={setUserInpute}
+        />
       </div>
     </section>
   );

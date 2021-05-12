@@ -45,43 +45,36 @@ export default function Ginny({
 
   return (
     <section className="backgroundGinny">
-      <div>
-        <Header
-          isShowingHeader={isShowingHeader}
-          toggleHeader={toggleHeader}
-          versPercy={versPercy}
-          versGinny={versGinny}
-          versPercyHeader={versPercyHeader}
-          versGinnyHeader={versGinnyHeader}
-        />
-        <div className="defisGinny">
-          <h1 className="ginnyTitle">Ginny</h1>
-          <button onClick={toggleGinny}>Tchater avec Percy</button>
-          <div className="defi">
-            <h2>Ses défis ! ⤵</h2>
-            <div className="lesDefis">
 
-              <button onClick={toggle}>Tchater avec Percy</button>
-              {messagesDefis.map((groupeMessage, index) => (
-
-                <ul
-                  key={index}
-                  className={index % 2 === 0 ? "pair1" : "impair1"}
-                >
-                  {groupeMessage.map((message, i) => (
-                    <li key={i} className="messages">
-                      {message}
-                      <button onClick={() => removeGinny(index)}>X</button>
-                    </li>
-                  ))}
-                </ul>
+      <Header
+        isShowingHeader={isShowingHeader}
+        toggleHeader={toggleHeader}
+        versPercy={versPercy}
+        versGinny={versGinny}
+        versPercyHeader={versPercyHeader}
+        versGinnyHeader={versGinnyHeader}
+      />
+      <div className="defisGinny">
+        <h1 className="ginnyTitle">Ginny</h1>
+        <button onClick={toggleGinny}>Tchater avec Percy</button>
+        <p>Vous avez aimé {count} fois les messages de Ginny </p>
+        <h2>Ses défis !</h2>
+        <div className="lesDefis">
+          {messagesDefisGinny.map((groupeMessage, index) => (
+            <ul key={index} className={index % 2 === 0 ? "pair1" : "impair1"}>
+              {groupeMessage.map((message, i) => (
+                <li key={i} className="messages">
+                  {message}
+                  <button onClick={() => removeGinny(index)}>X</button>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          ))}
         </div>
       </div>
+
       <div>
-        <div className="maVie"></div>
+
         <div className="messagesRobots">
           <h3 className="messageGinny">Messages de Ginny</h3>
           <div className="articles">
@@ -130,11 +123,11 @@ export default function Ginny({
               </figcaption>
               <button
                 className="likeButton"
-                id="checkbox"
+                id="checkbox1"
                 type="checkbox"
                 onClick={LikeClick1}
               >
-                {handleClick ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
+                {handleClick1 ? <ThumbUpIcon /> : <ThumbUpOutlinedIcon />}
                 <label for="checkbox"></label>
               </button>
             </figure>

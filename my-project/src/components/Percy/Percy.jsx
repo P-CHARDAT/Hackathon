@@ -50,9 +50,14 @@ export default function Percy({
         />
         <div className="defisPercy">
           <h1 className="percyTitle">Percy</h1>
-          <button onClick={toggle}>Tchater avec Percy</button>
-          <p>Vous avez cliqué sur le bouton Like {count} fois </p>
-          <h2>Ses défis !</h2>
+
+          <button className="tchatter"onClick={toggle}>Tchater avec Percy</button>
+    <p>Vous avez cliqué sur le bouton Like {count} fois </p>
+          <h2>Ses défis ! ⤵</h2>
+
+         
+          
+
           <div className="lesDefis">
             {messagesDefis.map((groupeMessage, index) => (
               <ul key={index} className={index % 2 === 0 ? "pair1" : "impair1"}>
@@ -65,10 +70,6 @@ export default function Percy({
               </ul>
             ))}
           </div>
-          <p className="texteDefi">
-            Appeler le composant défi ici. Il aura un state sauvegardant les
-            données envoyées depuis le formulaire modal
-          </p>
         </div>
 
         <div>
@@ -85,7 +86,13 @@ export default function Percy({
                 />
                 <time>13/04/2022 15:00</time>
                 <figcaption className="légendeArticle">
-                  Mes premières patates de Mars ! Trop content !
+
+                  Mes premières patates de Mars ! Trop content ! Je vous
+                  confirme qu’il est possible de faire pousser des pommes de
+                  terre ici, comme dans le blockbuster Seul sur Mars, avec Matt
+                  Damon. Notamment en fertilisant la terre martienne, et donc
+                  stérile, avec des excréments. 
+
                 </figcaption>
                 <button
                   className="likeButton"
@@ -108,8 +115,12 @@ export default function Percy({
                 />
                 <time>15/04/2022 8:00</time>
                 <figcaption className="légendeArticle">
-                  Cette montagne de sable... magnifique ! heureux d'y être aller
-                  avec Percy !
+                  Cette montagne de sable... magnifique ! Heureux d'y être aller
+                  avec Percy ! Je vous présente Olympus Mons. Avec 21,9
+                  kilomètres, l'énorme volcan bouclier est le plus haut sommet
+                  de toute planète du système solaire. Pendant 40 ans, après sa
+                  découverte en 1971, ce fut le plus haut sommet connu du
+                  système solaire.
                 </figcaption>
                 <button
                   className="likeButton"
@@ -123,7 +134,6 @@ export default function Percy({
               </figure>
             </div>
           </div>
-
           <div className="messagesLecteurs">
             <h3>Messages des lecteurs</h3>
             <div className="messageLecteur">

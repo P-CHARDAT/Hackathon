@@ -4,17 +4,22 @@
 
 .pair {
   text-align: end;
-  margin: 10px;
+margin: 0;
   color: red;
 }
 
 .impair {
   color: blue;
+  margin: 0;
+}
+.impair1{
+  margin-right:0;
 }
 
 .messages {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
 }
 
 .introduction{

@@ -121,6 +121,7 @@ function App() {
         </Route>
         <Route path="/ginny">
           <Ginny
+
             isShowingGinny={isShowingGinny}
             toggleGinny={toggleGinny}
             count={count}
@@ -132,6 +133,7 @@ function App() {
             setUserInputGinny={setUserInputGinny}
             setUserInputsGinny={setUserInputsGinny}
             setUserInputeGinny={setUserInputeGinny}
+
             isShowingHeader={isShowingHeader}
             toggleHeader={toggleHeader}
             versPercy={versPercy}

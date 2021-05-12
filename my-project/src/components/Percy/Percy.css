@@ -1,8 +1,13 @@
 .lesDefis {
-  color: rgb(24, 3, 3);
-  background-color: rgba(60, 57, 223, 0.7);
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.137);
   border-radius: 40px;
   display: block;
+  text-align: center;
+}
+.messages {
+  font-size: 25px;
+  text-align: center;
 }
 
 h2 {
@@ -18,7 +23,10 @@ h2 {
   background-color: rgb(199, 111, 99);
   margin: 2% 8% 0 8%;
   padding: 5px 40px;
-  text-align: justify;
+
+  text-align: center;
+
+
   border-radius: 70px;
   font-size: 25px;
   font-family: "Gill Sans", sans-serif;
@@ -72,25 +80,39 @@ h2 {
 }
 
 .defisPercy > button {
-  color: rgb(17, 1, 1);
+
+  color: #000000;
   border-radius: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 4px #cccccc;
+  align-items: center;
+  text-align: center;
+  font-size: 200%;
+  transition: all 0.5s;
   cursor: pointer;
 }
 .defisPercy > button:hover {
-  background-color: rgb(185, 108, 6);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+
 }
 
 @media screen and (max-width: 414px) {
   .defisPercy {
     font-size: 17px;
     margin-top: 8%;
+
+  }
+  .defisPercy > button {
+    font-size: 140%;
   }
   .percyTitle {
     font-size: 150%;
   }
   .messagesRobots {
     font-size: 17px;
-    margin-top: 8%;
   }
   .messageRobot {
     font-size: 150%;
@@ -103,3 +125,4 @@ h2 {
     font-size: 150%;
   }
 }
+
